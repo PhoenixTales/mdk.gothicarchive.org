@@ -400,6 +400,7 @@ and (max-width: 900px) {
 
   main {
     position: absolute;
+    max-width: 100%;
     top: 430px;
     margin-top: 0;
   }
