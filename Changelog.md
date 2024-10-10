@@ -3,7 +3,7 @@
 
 ## v1.4 // 13.10.2022
 
-* update the introduction from Alex by combining it 
+* update the introduction from Alex by combining it  
   with the slightly different alex.txt provided by Tom
 * added _config.yml for jekyll
 * renamed documents -> docs
