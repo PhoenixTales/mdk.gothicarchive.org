@@ -331,11 +331,13 @@ label[for="menu-toggle"]  {
 }
 
 
-@media (max-width: 900px) {
+@media only screen
+and (max-width: 900px) {
+
   body {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center;*/
     padding: 0 2em;
   }
 
