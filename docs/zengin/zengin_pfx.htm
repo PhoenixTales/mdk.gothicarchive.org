@@ -1,3 +1,7 @@
+---
+title: Particle Effects
+---
+
 <HTML>
 <HEAD>
 	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
@@ -60,7 +64,7 @@
 		<li><a href="#02"><b>2 ParticleFX Parameter</b></a>
 			<ul>
 			<li>2.1 Emitter: Zeitliches Ausstoss-Verhalten
-			<li>2.2 Emitter: Räumliches Ausstoss-Verhalten
+			<li>2.2 Emitter: Rï¿½umliches Ausstoss-Verhalten
 			<li>2.3 Partikel: Start Richtung und Geschwindigkeit
 			<li>2.4 Partikel: Lebensdauer
 			<li>2.5 Partikel: Flugverhalten
@@ -105,21 +109,21 @@ v0.01
 <p>Die Partikel-Effekte (ParticleFX, PFX), die sich durch das Partikel-System der ZenGin ab Version 0.71 erzeugen lassen, werden durch einen Satz von Parametern festgelegt. Die Definitionen der Partikel-Effekte mitsamt ihren Parametern werden in D-Scripten abgelegt. Folgende D-Scripte sind in diesem Zusammenhang wichtig:
 <ul>
 <li>_WORK\DATA\SCRIPTS\ParticleFX.src<br>
-In dieser Datei sind alle für das Partikel-System relevanten .d Files aufgelistet.
+In dieser Datei sind alle fï¿½r das Partikel-System relevanten .d Files aufgelistet.
 <li>_WORK\DATA\SCRIPTS\CONFIG\ParticleFX.d<br>
-Diese Datei enthält die Parameter-Definitionen von Partikel-Effekten.
+Diese Datei enthï¿½lt die Parameter-Definitionen von Partikel-Effekten.
 <li>_WORK\DATA\SCRIPTS\_INTERN\ParticleFXDef.d<br>
 Hier ist die Partikel-Effekt-Klasse " C_PARTICLEFX" deklariert. Konkrete Partikel-Effekte sind Instanzen dieser Klasse (siehe auch Dokumentation zur Skriptsprache).
 <li>_WORK\DATA\SCRIPTS\_INTERN\ParticleFXEngine.d<br>
-Diese Datei enthält die Parameter-Definitionen von Partikel-Effekten.
+Diese Datei enthï¿½lt die Parameter-Definitionen von Partikel-Effekten.
 </ul>
 </p>
 
 <p>Die Instanzen-Parameter von Partikel-Effekten werden in einer speziellen Console editiert und auch dort durch den Befehl <i>save</i> gespeichert. Zugang zu dieser Console bekommt man im Editor Spacer oder auch direkt aus Gothic heraus. Hinweise zur Benutzung von Consolen gibt es an anderer Stelle.</p>
 
-<p>Partikel-Effekte können u.a. auch aus .MDS Files heraus gestartet und mit Animationen synchronisiert werden. Siehe dazu die entsprechende Dokumentation.</p>
+<p>Partikel-Effekte kï¿½nnen u.a. auch aus .MDS Files heraus gestartet und mit Animationen synchronisiert werden. Siehe dazu die entsprechende Dokumentation.</p>
 
-<p>Zur Performance ist zu sagen, daß ein Partikel-Effekt weniger Rechenzeit beansprucht, je weniger Partikel er enthält, je weiter er von der Kamera entfernt ist und je weniger zeitintensive Einstellungen bei den Parametern gewählt worden sind (dazu unten mehr). Interessant ist, wie groß die Bedeutung der Entfernung der Partikel von der Camera  für die Performance ist.</p>
+<p>Zur Performance ist zu sagen, daï¿½ ein Partikel-Effekt weniger Rechenzeit beansprucht, je weniger Partikel er enthï¿½lt, je weiter er von der Kamera entfernt ist und je weniger zeitintensive Einstellungen bei den Parametern gewï¿½hlt worden sind (dazu unten mehr). Interessant ist, wie groï¿½ die Bedeutung der Entfernung der Partikel von der Camera  fï¿½r die Performance ist.</p>
 
 <p>Die Aktivierung folgender Features steigert den Rechenzeitbedarf deutlich:
 <ul>
@@ -130,25 +134,25 @@ Diese Datei enthält die Parameter-Definitionen von Partikel-Effekten.
 </p>
 
 <!---- nicht releant fuer GothicMOD-Ersteller
-<p>Auf der C++ Programmebene kann eine auf die ZenGin aufsetzende Applikation Partikel-Effekte in einer Art und Weise manipulieren, die über die reine Festlegung der Parameter hinausgeht (siehe dazu das Interface der C++ Klasse zCParticleFX). Einige dieser Möglichkeiten sind:</p>
+<p>Auf der C++ Programmebene kann eine auf die ZenGin aufsetzende Applikation Partikel-Effekte in einer Art und Weise manipulieren, die ï¿½ber die reine Festlegung der Parameter hinausgeht (siehe dazu das Interface der C++ Klasse zCParticleFX). Einige dieser Mï¿½glichkeiten sind:</p>
 <ul>
 <li>Animation der Position und/oder Orientierung des Partikel-Effekt Emitters auf beliebige Weise (z.B. auch Splines)
-<li>Erstellung komplexer Effekte durch die räumliche Überlagerung mehrer verschiedener Partikel-Effekte 
-<li>Variation der PFX-internen Zeit-Skalierung; auf diese Weise kann z.B. ein PFX aus dem normalen Ablauf langsam auf Stillstand gebracht werden (lerp des TimeScales von 1 auf 0); "dramatische" Effekte könnten dadurch erzielt werden, daß die Skalierung in kurzen Intervallen und abrupt zwischen 1 und 0 wechselt
-<li>Das Target innerhalb des "dirMode = TARGET" (siehe unten) kann durch das Programm auf beliebige Punkte und Objekte gesetzt oder auch räumlich animiert werden (z.B. könnte der Emitter des PFX auf den Kopf des ersten Models gesetzt werden, während das Target auf den Kopf des zweiten Models sitzt)
+<li>Erstellung komplexer Effekte durch die rï¿½umliche ï¿½berlagerung mehrer verschiedener Partikel-Effekte 
+<li>Variation der PFX-internen Zeit-Skalierung; auf diese Weise kann z.B. ein PFX aus dem normalen Ablauf langsam auf Stillstand gebracht werden (lerp des TimeScales von 1 auf 0); "dramatische" Effekte kï¿½nnten dadurch erzielt werden, daï¿½ die Skalierung in kurzen Intervallen und abrupt zwischen 1 und 0 wechselt
+<li>Das Target innerhalb des "dirMode = TARGET" (siehe unten) kann durch das Programm auf beliebige Punkte und Objekte gesetzt oder auch rï¿½umlich animiert werden (z.B. kï¿½nnte der Emitter des PFX auf den Kopf des ersten Models gesetzt werden, wï¿½hrend das Target auf den Kopf des zweiten Models sitzt)
 <li>...
 </ul>
 ----->
 
 <a name="02"><H1>2 ParticleFX Parameter</H1></a>
 
-<p>Die Parameter der Partikel-Effekte werden in der Regel über die Console innerhalb des Spacers editiert, können aber auch in den entsprechenden .d Sourcefiles geändert werden. </p>
+<p>Die Parameter der Partikel-Effekte werden in der Regel ï¿½ber die Console innerhalb des Spacers editiert, kï¿½nnen aber auch in den entsprechenden .d Sourcefiles geï¿½ndert werden. </p>
 
-<p>In diesem Abschnitt werden die über 40 Parameter eines Partikel-Effekts thematisch zusammengefaßt erläutert. Die Tabelle führt für jeden Parameter dessen Name, D-Type, erwartete/gültige Werte und schließlich beispielhafte Werte auf. Parameter, deren Namen mit einem "_S" enden, sind vom Typ String und erwarten als Eingabe entweder einen von mehreren vorgegebenen Bezeichnern, die in der Spalte "erwartete Werte" durch Anführungszeichen geklammert und durch Kommata getrennt aufgeführt sind, oder eine Liste von Zahlen. Falls für einen Parameter aus einer Liste von vorgegebenen Bezeichnern auszuwählen ist und der Parameter entweder einen leeren oder falsch geschriebenen Wert enthält, wird die erste Alternative aus der Liste der möglichen gewählt. Ein "_S" Parameter ohne Wert ist also kein Fehler.</p>
+<p>In diesem Abschnitt werden die ï¿½ber 40 Parameter eines Partikel-Effekts thematisch zusammengefaï¿½t erlï¿½utert. Die Tabelle fï¿½hrt fï¿½r jeden Parameter dessen Name, D-Type, erwartete/gï¿½ltige Werte und schlieï¿½lich beispielhafte Werte auf. Parameter, deren Namen mit einem "_S" enden, sind vom Typ String und erwarten als Eingabe entweder einen von mehreren vorgegebenen Bezeichnern, die in der Spalte "erwartete Werte" durch Anfï¿½hrungszeichen geklammert und durch Kommata getrennt aufgefï¿½hrt sind, oder eine Liste von Zahlen. Falls fï¿½r einen Parameter aus einer Liste von vorgegebenen Bezeichnern auszuwï¿½hlen ist und der Parameter entweder einen leeren oder falsch geschriebenen Wert enthï¿½lt, wird die erste Alternative aus der Liste der mï¿½glichen gewï¿½hlt. Ein "_S" Parameter ohne Wert ist also kein Fehler.</p>
 
-<p>"BOOL" deutet daraufhin, daß ein boolescher Wahrheitswert erwartet wird, 0 für FALSCH, oder 1 für WAHR. "VECn" steht für einen n-dimensionalen Vektor aus Real-Zahlen, "ANGLE" steht für Winkel Angaben in Grad.</p>
+<p>"BOOL" deutet daraufhin, daï¿½ ein boolescher Wahrheitswert erwartet wird, 0 fï¿½r FALSCH, oder 1 fï¿½r WAHR. "VECn" steht fï¿½r einen n-dimensionalen Vektor aus Real-Zahlen, "ANGLE" steht fï¿½r Winkel Angaben in Grad.</p>
 
-<p>Parameter, die das Kürzel "FOR" enthalten, fassen die Angabe einer "Frame-of-Reference", also Bezugssystem-Angabe. Gültig sind hier "world" und "object", wobei letzteres mehr Rechenzeit kostet und nur wenn nötig gewählt werden sollte.</p>
+<p>Parameter, die das Kï¿½rzel "FOR" enthalten, fassen die Angabe einer "Frame-of-Reference", also Bezugssystem-Angabe. Gï¿½ltig sind hier "world" und "object", wobei letzteres mehr Rechenzeit kostet und nur wenn nï¿½tig gewï¿½hlt werden sollte.</p>
 
 <H2>2.1 Emitter: Zeitliches Ausstoss-Verhalten</H2>
 
@@ -163,9 +167,9 @@ Diese Datei enthält die Parameter-Definitionen von Partikel-Effekten.
 <tr><td>VAR FLOAT</td><td>PpsFPS;</td><td>&nbsp;</td><td>0.5</td></tr>
 </table>
 
-<p>"pps" steht für "particles per second". Diese Parameter steuern das zeitliche Ausstoss-Verhalten des Emitters, daß auch über die Zeit durch Angabe von ScaleKeys animiert werden kann. Falls ScaleKeys angegeben werde, wird die Liste dieser Keys mit einer gewissen Geschwindigkeit (ppsFPS) durchlaufen, wobei optional zwischen den einzelnen Keys interpoliert wird (ppsIsSmooth). Wenn PpsIsLooping auf 1 gesetzt ist, wird der Durchlauf durch die Liste fortwährend wiederholt, ansonsten wird die Liste nur ein einziges mal durchlaufen und der PFX stirbt am Ende, sobald der letzte Partikel verschwunden ist. Die einzelnen ScaleKeys variieren über die Zeit den unter PpsValue angegebenen Wert. In diesem Fall ist die Einheit dieses Wertes "particles per second". Falls keine ScaleKeys angegeben sind und auch das Flag PpsIsLooping den Wert 0 hat, so wird der Wert des PpsValue nicht als "pps" interpretiert, sondern als die Anzahl Partikel, die auf einmal zu Beginn des Effektes erzeugt werden.</p>
+<p>"pps" steht fï¿½r "particles per second". Diese Parameter steuern das zeitliche Ausstoss-Verhalten des Emitters, daï¿½ auch ï¿½ber die Zeit durch Angabe von ScaleKeys animiert werden kann. Falls ScaleKeys angegeben werde, wird die Liste dieser Keys mit einer gewissen Geschwindigkeit (ppsFPS) durchlaufen, wobei optional zwischen den einzelnen Keys interpoliert wird (ppsIsSmooth). Wenn PpsIsLooping auf 1 gesetzt ist, wird der Durchlauf durch die Liste fortwï¿½hrend wiederholt, ansonsten wird die Liste nur ein einziges mal durchlaufen und der PFX stirbt am Ende, sobald der letzte Partikel verschwunden ist. Die einzelnen ScaleKeys variieren ï¿½ber die Zeit den unter PpsValue angegebenen Wert. In diesem Fall ist die Einheit dieses Wertes "particles per second". Falls keine ScaleKeys angegeben sind und auch das Flag PpsIsLooping den Wert 0 hat, so wird der Wert des PpsValue nicht als "pps" interpretiert, sondern als die Anzahl Partikel, die auf einmal zu Beginn des Effektes erzeugt werden.</p>
 
-<p>Beachte: PpsIsLooping=0;	=> Effekt löscht sich am Ende selbst</p>
+<p>Beachte: PpsIsLooping=0;	=> Effekt lï¿½scht sich am Ende selbst</p>
 
 <pre>
 Beispiele:
@@ -200,7 +204,7 @@ PpsFPS    	    = 0.8;
 </pre>
 
 
-<H2>2.2 Emitter: Räumliches Ausstoss-Verhalten</H2>
+<H2>2.2 Emitter: Rï¿½umliches Ausstoss-Verhalten</H2>
 
 <table cellpadding=0 border=2>
 <tr>
@@ -290,19 +294,19 @@ PpsFPS    	    = 0.8;
 </tr>
 </table>
 
-<p>Diese Parameter legen die Orte fest, an denen neue Partikel erschaffen werden. Zu diesem Zweck werden Formen/Shapes mitsamt einiger Eigenschaften angegeben, auf denen die Partikel generiert werden. Die Größe, der lokale Offset und die über die Zeit variierte Skalierung der Shapes kann ebenfalls festgelegt werden.
+<p>Diese Parameter legen die Orte fest, an denen neue Partikel erschaffen werden. Zu diesem Zweck werden Formen/Shapes mitsamt einiger Eigenschaften angegeben, auf denen die Partikel generiert werden. Die Grï¿½ï¿½e, der lokale Offset und die ï¿½ber die Zeit variierte Skalierung der Shapes kann ebenfalls festgelegt werden.
 <ul>
-<li>ShpType_S wählt einen der möglichen ShapeTypen aus. Im Fall "mesh" werden die Partikel auf der Oberfläche des Meshes erzeugt. "point" ist der schnellste ShapeTyp.
+<li>ShpType_S wï¿½hlt einen der mï¿½glichen ShapeTypen aus. Im Fall "mesh" werden die Partikel auf der Oberflï¿½che des Meshes erzeugt. "point" ist der schnellste ShapeTyp.
 <li>ShpFOR legt fest, ob die Shape den Rotationen des Emitters folgen soll ("object") oder nicht ("world"). 
 <li>ShpOffsetVec legt im lokalen Koordinatensystem des Emitters einen 3D Offset -Vektor fest (wichtig um einen PFX korrekt an Model-Nodes/Limbs auszurichten). 
-<li>ShpDistribType legt fest, wie neu generierte Partikel auf der Shape angeordnet werden. "rand" wählt den Ort zufällig, "uniform" wählt den Ort geordnet&gleichmässig (allerdings nur bei "line" und "circle"), "walk" wählt den Ort geordnet&gleichmässig, aber nur auf einem gewissen Teilstück der Shape (nur bei "line" und "circle"). Im Falle des Distributions-Modus "walkw" legt ShpDistribWalkSpeed fest, wie schnell der Ort der Partikel-Generierung über die Shape wandert. 
-<li>ShpIsVolume legt fest, ob die Partikel auf dem Rand oder auf der Fläche/in dem Volumen der Shape generiert werden sollen. 
-<li>ShpDim legt die Größe der Shape fest (nicht bei "mesh") und ist je nach ShapeType ein 1 oder 3 dimensionaler Vektor (line,circle, sphere 1D, box 3D).
+<li>ShpDistribType legt fest, wie neu generierte Partikel auf der Shape angeordnet werden. "rand" wï¿½hlt den Ort zufï¿½llig, "uniform" wï¿½hlt den Ort geordnet&gleichmï¿½ssig (allerdings nur bei "line" und "circle"), "walk" wï¿½hlt den Ort geordnet&gleichmï¿½ssig, aber nur auf einem gewissen Teilstï¿½ck der Shape (nur bei "line" und "circle"). Im Falle des Distributions-Modus "walkw" legt ShpDistribWalkSpeed fest, wie schnell der Ort der Partikel-Generierung ï¿½ber die Shape wandert. 
+<li>ShpIsVolume legt fest, ob die Partikel auf dem Rand oder auf der Flï¿½che/in dem Volumen der Shape generiert werden sollen. 
+<li>ShpDim legt die Grï¿½ï¿½e der Shape fest (nicht bei "mesh") und ist je nach ShapeType ein 1 oder 3 dimensionaler Vektor (line,circle, sphere 1D, box 3D).
 </ul>
 </p>
 
-<p>Falls als ShapeType "mesh" gewählt wurde, kann unter ShpMesh der Name des Meshes als .3ds File spezifiziert werden. Falls ShpMeshRender auf 1 gesetzt ist, wird das Mesh zusammen mit den Partikeln gerendert.</p>
-<p>Die Parameter ShpScale* legen die über die Zeit variierte Skalierung der Shape fest und verhalten sich ähnlich wie die entsprechenden pps* Parameter.</ul>
+<p>Falls als ShapeType "mesh" gewï¿½hlt wurde, kann unter ShpMesh der Name des Meshes als .3ds File spezifiziert werden. Falls ShpMeshRender auf 1 gesetzt ist, wird das Mesh zusammen mit den Partikeln gerendert.</p>
+<p>Die Parameter ShpScale* legen die ï¿½ber die Zeit variierte Skalierung der Shape fest und verhalten sich ï¿½hnlich wie die entsprechenden pps* Parameter.</ul>
 
 <H2>2.3 Partikel: Start Richtung und Geschwindigkeit</H2>
 
@@ -376,8 +380,8 @@ PpsFPS    	    = 0.8;
 </table>
 
 <p>Diese Parameter legen die Flugrichtung und Geschwindigkeit neuer Partikel fest. </p>
-<p>Im DirMode "none" wird eine rein zufällige Flugrichtung festgelegt, was bedeutet, daß die Partikel kugelförmig vom Emitter abstrahlen.</p>
-<p>Der DirMode "dir" legt fest, daß sich die Flugrichtung eines neuen Partikels aus den Werten der Parameter DirAngleHead und DirAngleElev ergibt, wobei ersterer die Heading angibt und zweiterer die Elevation. Diese beiden werden werden jeweils um die Werte der Parameter DirAngleHeadVar und DirAngleHeadVar variiert (+/- Varianz). Es ist anzumerken, daß aus Optimierungs-Gründen die Winkel nicht exakt eingehalten werden, sondern evtl. streuen, sich nicht-uniforme Verteilungen ergeben, oder sogar völlig unerwartete Ergebnisse liefern. In diesen Fällen sollten sich allerdings trotzdem durch kleine Justierungen die gewünschten Effekte erzielen lassen.</p>
+<p>Im DirMode "none" wird eine rein zufï¿½llige Flugrichtung festgelegt, was bedeutet, daï¿½ die Partikel kugelfï¿½rmig vom Emitter abstrahlen.</p>
+<p>Der DirMode "dir" legt fest, daï¿½ sich die Flugrichtung eines neuen Partikels aus den Werten der Parameter DirAngleHead und DirAngleElev ergibt, wobei ersterer die Heading angibt und zweiterer die Elevation. Diese beiden werden werden jeweils um die Werte der Parameter DirAngleHeadVar und DirAngleHeadVar variiert (+/- Varianz). Es ist anzumerken, daï¿½ aus Optimierungs-Grï¿½nden die Winkel nicht exakt eingehalten werden, sondern evtl. streuen, sich nicht-uniforme Verteilungen ergeben, oder sogar vï¿½llig unerwartete Ergebnisse liefern. In diesen Fï¿½llen sollten sich allerdings trotzdem durch kleine Justierungen die gewï¿½nschten Effekte erzielen lassen.</p>
 <p>Im DirMode "target" wird die Flugrichtung aller neu erzeugter Partikel auf ein gemeinsames Ziel hin asugerichtet. Die Koordinaten dieses Ziels werden entweder in lokalen oder Weltkoordinaten (DirModeTargetFOR) als Parameter DirModeTargetPos angegeben.</p>
 <p>Im DirMode "mesh" werden die Partikel von den Polys des Meshes mit der Varianz DirAngleHeadVar und DirAngleElevVar abgestrahlt.</p>
 <p>VelAvg und velVar legen die durchschnittliche Geschwindigkeit und die +/- Varianz davon fest.</p>
@@ -430,7 +434,7 @@ PpsFPS    	    = 0.8;
 
 
 <p>Der unter flyGravity anzugebene Kraft-Vektor bezieht sich auf das Weltkoordinaten-System.</p>
-<p>FlyCollDet_B legt das Kollisionsverhalten der Partikel fest: 0= kein Test auf Kollision, 1= bremsende Reflektion, 2= beschleunigende Reflektion, 3= Geschwindigkeit auf null setzen, 4= Partikel entfernen. Eine aktivierte Kollisionserkennung benötigt relativ viel Rechenzeit.</p>
+<p>FlyCollDet_B legt das Kollisionsverhalten der Partikel fest: 0= kein Test auf Kollision, 1= bremsende Reflektion, 2= beschleunigende Reflektion, 3= Geschwindigkeit auf null setzen, 4= Partikel entfernen. Eine aktivierte Kollisionserkennung benï¿½tigt relativ viel Rechenzeit.</p>
 
 <H2>2.6 Partikel: Visualisierung</H2>
 
@@ -504,12 +508,12 @@ PpsFPS    	    = 0.8;
 </table>
 
 
-<p>VisName gibt den Filenamen des für die Partikel zu benutzenden Visuals an. [Zur Zeit funkionieren nur (animierte) Textures, Meshes folgen evtl. noch. Auch werden alle Partikel mit demselben Visual ausgestattet].</p>
-<p>VisOrientation legt fest, mit welcher Orientierung die Visuals gerendert werden. "none" rendert Textures als zum Bildschirm ausgerichtete Decals, während "velo" die Texture-Decals an dem Geschwindigkeits-Vektor der Partikel ausrichtet.</p>
+<p>VisName gibt den Filenamen des fï¿½r die Partikel zu benutzenden Visuals an. [Zur Zeit funkionieren nur (animierte) Textures, Meshes folgen evtl. noch. Auch werden alle Partikel mit demselben Visual ausgestattet].</p>
+<p>VisOrientation legt fest, mit welcher Orientierung die Visuals gerendert werden. "none" rendert Textures als zum Bildschirm ausgerichtete Decals, wï¿½hrend "velo" die Texture-Decals an dem Geschwindigkeits-Vektor der Partikel ausrichtet.</p>
 <p>Parameter, die ein "tex" im Namen enthalten, wirken sich nur aus, wenn alsVisuals Textures benutzt werden.</p>
-<p>VisTexIsQuadPoly legt fest, ob für die Partikel Tris oder Quads benutzt werden sollen. Tris sind i.A. wesentlich schneller als Quads. Quads sollten nur in absoluten Ausnahmefällen benutzt werden.</p>
+<p>VisTexIsQuadPoly legt fest, ob fï¿½r die Partikel Tris oder Quads benutzt werden sollen. Tris sind i.A. wesentlich schneller als Quads. Quads sollten nur in absoluten Ausnahmefï¿½llen benutzt werden.</p>
 <p>VisTexAniIsLooping legt fest, ob eine animierte Partikel-Textur geloopt auf dem letzten Frame gestoppt werden soll.</p>
-<p>Die Partikel Attribute "color", "size" und "alpha" werden über die gesamte Lebensdauer des Partikels hinweg linear zwischen Start und Endwert interpoliert. Die Bedeutung der Parameter sollte klar sein. </p>
+<p>Die Partikel Attribute "color", "size" und "alpha" werden ï¿½ber die gesamte Lebensdauer des Partikels hinweg linear zwischen Start und Endwert interpoliert. Die Bedeutung der Parameter sollte klar sein. </p>
 
 <H2>2.7 Weitere Effekte</H2>
 
@@ -553,13 +557,13 @@ PpsFPS    	    = 0.8;
 
 <p>
 <u>Trail:</u><br>
-Die Flugbahn eines jeden Partikels durch einen "Trail" visualisiert werden. Dieser Trail hat eine gewisse Dicke trlWidth, wird mit einer der Textur trlTexture_S gerendert und fadet mit der Geschwindigkeit trlFadeSpeed aus. Trails werden nur erzeugt, wenn trlFadeSpeed einen Wert größer null hat.
-Trails benötigen relativ viel Rechenzeit.</p>
+Die Flugbahn eines jeden Partikels durch einen "Trail" visualisiert werden. Dieser Trail hat eine gewisse Dicke trlWidth, wird mit einer der Textur trlTexture_S gerendert und fadet mit der Geschwindigkeit trlFadeSpeed aus. Trails werden nur erzeugt, wenn trlFadeSpeed einen Wert grï¿½ï¿½er null hat.
+Trails benï¿½tigen relativ viel Rechenzeit.</p>
 
 <p>
 <u>Mark:</u><br>
-Wenn Partikel mit ihrer Umgebung kollidieren können sie auf dieser Spuren, sogennante "Marks" hinterlassen. Diese Marks sind vierseitige Polygone, die am Ort der Kollision erzeugt werden und sich exakt der dort vorgefundenen Oberfläche anpassen. Marks habe eine gewisse Größe mrkSize, werden mit einer bestimmten Textur mrkTexture_S gerendert und faden mit der Geschwindigkeit mrkFadeSpeed aus. Marks werden nur erzeugt, wenn mrkFadeSpeed einen Wert größer null hat und Kollisionserkennung für den Partikeleffekt aktiviert ist (siehe flyCollDet_B).
-Marks benötigen relativ viel Rechenzeit.</p>
+Wenn Partikel mit ihrer Umgebung kollidieren kï¿½nnen sie auf dieser Spuren, sogennante "Marks" hinterlassen. Diese Marks sind vierseitige Polygone, die am Ort der Kollision erzeugt werden und sich exakt der dort vorgefundenen Oberflï¿½che anpassen. Marks habe eine gewisse Grï¿½ï¿½e mrkSize, werden mit einer bestimmten Textur mrkTexture_S gerendert und faden mit der Geschwindigkeit mrkFadeSpeed aus. Marks werden nur erzeugt, wenn mrkFadeSpeed einen Wert grï¿½ï¿½er null hat und Kollisionserkennung fï¿½r den Partikeleffekt aktiviert ist (siehe flyCollDet_B).
+Marks benï¿½tigen relativ viel Rechenzeit.</p>
 
 
 
