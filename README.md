@@ -1,7 +1,11 @@
-# GOTHIC Development Kit 1.3
-  
-  
+---
+title: README
+---
+
+# GOTHIC Development Kit 1.4
     
+The original Readme of the Gothic MDK 1.0 is [to be found here](/docs/Readme.txt). The only addition are the new tools in the directory structure.
+
 ## ENGLISH  
   
 PhoenixTales' update of the official GOTHIC Mod Development Kit, to be used for non-commercial modifications. Version 1.0 was released by Piranha Bytes in 2001. See our [Changelog](https://github.com/PhoenixTales/gothic-devkit/blob/main/Changelog.txt) for details.  
@@ -24,7 +28,6 @@ Textures are not included and have to be extracted from your local copy of the g
 > All tools and assets included in the PLAYER-KIT and the DEVELOPMENT-KIT, as well as all assets created, respectively modified by it, must not be used commercial.
   
 These files can serve as a base for making modifications to GOTHIC. They should not be copied to any mod project nor included in a mod package, unless modifications to them are (to be) made.  
-  
   
   
 ## DEUTSCH  
@@ -50,7 +53,6 @@ Texturen sind nicht enthalten, sie müssen aus der lokalen Kopie des Spiels extr
   
 Die vorliegenden Dateien können als Grundlage für Modifikationen von GOTHIC dienen. Dateien sollten nur dann in ein Mod Projekt kopiert und in ein Mod Package inkludiert werden, wenn Modifikationen vorgenommen werden (sollen).  
 
-    
   
 ## COPYRIGHT  
   
