@@ -5,8 +5,6 @@ include:
   - "_img"
   - "docs"
 theme: null
-layouts_dir: ./wiki/templates
-includes_dir: ./wiki/templates
 defaults:
   -
     scope:
