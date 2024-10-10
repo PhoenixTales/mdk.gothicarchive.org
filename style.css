@@ -338,9 +338,25 @@ label[for="menu-toggle"]  {
     justify-content: center;
     padding: 0 2em;
   }
-  
+
   .menu {
-  margin-bottom: 2em; 
+    margin-bottom: 2em; 
+    background: #000000e0;
+    z-index: 2;
+  }
+
+  .menu header {
+    overflow: hidden;
+    height: 338px;
+    width: unset; 
+    padding-bottom: 0;
+  }
+
+  header img {
+    margin: 0;
+    /*margin-left: calc(50vw - 160px);*/
+    position: relative;
+    top: 43px;
   }
 
   label[for="menu-toggle"] {
@@ -386,5 +402,12 @@ label[for="menu-toggle"]  {
     top: 430px;
     margin-top: 0;
   }
+}
 
+@supports (backdrop-filter: blur(10px)) {
+  .menu,
+  label[for="menu-toggle"] {
+    backdrop-filter: blur(10px);
+    background: #000000dd;
+  }
 }
