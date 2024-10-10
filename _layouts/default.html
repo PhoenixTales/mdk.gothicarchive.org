@@ -9,8 +9,14 @@
     </head>
     
     <body>
+
       <nav>
         <div class="menu-wrapper">
+            <header>
+              <img src="/_img/mdk3.png" alt="Gothic MDK Logo">
+              <a href="/"><h1>Gothic MDK v1.4.1</h1></a>
+            </header>
+
             <input type="checkbox" id="menu-toggle">
             <label for="menu-toggle">
                 <span class="menu-icon">&#8801;</span>
@@ -26,8 +32,7 @@
         </div>
     
         <section class="menu">
-          {% capture nav %}{% include /nav.html %}{% endcapture %}
-          {{ nav | markdownify }}
+          {% include nav.html %}
         </section>
       </nav>
       
@@ -37,9 +42,10 @@
         </section>
       </main>
       
-      <div class="dir">
+      <!--<div class="dir">
         <a href="{{page.dir}}">{{page.dir}}</a><span>{{page.name}}</span>
-      </div>
+      </div>-->
       {% include footer.html %}
+
     </body>
 </html>
