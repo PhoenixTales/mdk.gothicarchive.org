@@ -308,7 +308,7 @@ a img {
   border: 2px solid black;
 }
 
-body main, main p, main li, main table, main tr, main td, main th {
+.article, .article p, .article li, .article table, .article tr, .article td, .article th {
   font-family: verdana, helvetica;
   font-size: 10pt;
 }
