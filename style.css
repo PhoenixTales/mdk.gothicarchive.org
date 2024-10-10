@@ -42,6 +42,8 @@ header img {
 footer {
   width: 100%;
   padding: 1em 1em;
+  font-size: 15px;
+  text-transform: uppercase;
   display: flex;
   font-family: "IBM VGA 8x16", monospace;
 }
