@@ -18,6 +18,7 @@ morph-meshes and worlds in decompiled form.
 Flosha: added copyright/authors list to tools/
 
 Flosha: added alex.txt (thanks to Tom Putzki)
+        to the mdk-introduction
 
 Avallach: Animations decompiled from 
 GOTHIC using Gothic Sourcer 3.14:
