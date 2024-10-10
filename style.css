@@ -400,7 +400,7 @@ and (max-width: 900px) {
     margin-bottom: 81px;
   }
 
-  main > .article {
+  main {
     position: absolute;
     top: 430px;
     margin-top: 0;
