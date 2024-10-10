@@ -342,7 +342,7 @@ label[for="menu-toggle"]  {
   .menu {
     margin-bottom: 2em; 
     background: #000000e0;
-    min-width: none;
+    min-width: initial;
     width: 100%;
     z-index: 2;
   }
