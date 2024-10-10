@@ -12,15 +12,15 @@
 
 ## v1.3 // 12.02.2021
 
-Version 1.3 integrates all animations,
+Version 1.3 integrates all animations,  
 morph-meshes and worlds in decompiled form.
 
 Flosha: added copyright/authors list to tools/
 
-Flosha: added alex.txt (thanks to Tom Putzki)
+Flosha: added alex.txt (thanks to Tom Putzki)  
         to the mdk-introduction
 
-Avallach: Animations decompiled from 
+Avallach: Animations decompiled from  
 GOTHIC using Gothic Sourcer 3.14:
   * ASC_ANIMS 
   * ASC_BODIES 
@@ -31,7 +31,7 @@ GOTHIC using Gothic Sourcer 3.14:
   * MDS_MOBSI
   * MDS_OVERLAY
 
-Avallach: Some zen files, not yet part of the 
+Avallach: Some zen files, not yet part of the  
 official MDK, extracted by using GothicVDFS:
   * FIRETREE_LARGE.ZEN
   * FIRETREE_MEDIUM.ZEN
@@ -50,19 +50,19 @@ official MDK, extracted by using GothicVDFS:
 
 ## v1.2 // 29.02.2020
 
-Flosha: v1.2 integriert primär diverse Tools, 
+Flosha: v1.2 integriert primär diverse Tools,  
 die innerhalb der Community entwickelt wurden.
 
 * GothicVDFS aktualisiert (v1.5 -> v1.6.2)
 
-* VDFS-Tool/ umbenannt in tools/ 
+* VDFS-Tool/ umbenannt in tools/  
   (Hierarchie von Nico übernommen) 
 
 * 3DS MAX Stuff/ verschoben in tools/
 * Milkshape 3D Stuff/ angelegt in tools/
 * Blender Stuff/ angelegt in tools/
 
-New tools included:     
+New tools included:  
   * GoMan 0.93 
   * GothicZTEX Decompressor 1.2.1 
   * ZTEX Tools 1.0
@@ -83,18 +83,18 @@ New tools included:
   * Spacer Hotkeys
   * ZenVis 1.8.2
 
-New plugins added:
+New plugins added:  
   * MilkShape 3D Import/Export PlugIn for GOTHIC 3DS (Nico)
   * Kerrax Imp/Exp 3DSMax5 & 3DSMAX 6-8 (3DS Max Stuff/Plugins)
   * Unrecorded List Exporter Plugin für den Output-Commander
   * Gothic MaT-Blender 1.3 (Blender Stuff)
   * KerraxImpExp. Blender 2.78 (fix)
 
-Fixed some grammar in the german documentation
-Added ZTEX documentation (misc/ZTEX file reference)    
+Fixed some grammar in the german documentation  
+Added ZTEX documentation (misc/ZTEX file reference)  
 Added Gothic versions document (misc/GothicVersions) 
 
-Added armors in .asc format (_work/data/Anims/asc_bodies/armor)
+Added armors in .asc format (_work/data/Anims/asc_bodies/armor)  
 
 Added Daedalus Syntax Highlighting (misc/) for:
   * CodeEdit
@@ -104,17 +104,17 @@ Added Daedalus Syntax Highlighting (misc/) for:
   * UltraEdit
   * VSCode
 
-Flosha: Spacer Fix 1.51:
-  Das in 1.50 eingeführte Signal beim Abschluss von 
-  Operationen ist jetzt weniger schrill (system/ready.wav)
-  (Wenn ihr euch ein anderes Signal wünscht (default ist 
-  _work/data/sound/sfx/inv_open.wav), einfach ready.wav 
-  unter system/ durch euer gewünschtes Signal ersetzen)
+Flosha: Spacer Fix 1.51:  
+  Das in 1.50 eingeführte Signal beim Abschluss von  
+  Operationen ist jetzt weniger schrill (system/ready.wav)  
+  (Wenn ihr euch ein anderes Signal wünscht (default ist  
+  _work/data/sound/sfx/inv_open.wav), einfach ready.wav  
+  unter system/ durch euer gewünschtes Signal ersetzen)  
 
-Flosha: Releases.txt angelegt (dokumentiert die Release 
-  Dates diverser Komponenten des DevKits unter /tools) 
+Flosha: Releases.txt angelegt (dokumentiert die Release  
+  Dates diverser Komponenten des DevKits unter /tools)  
 
-Flosha: WorldofGothicLinks.txt angelegt (Linkliste zu den 
+Flosha: WorldofGothicLinks.txt angelegt (Linkliste zu den  
   Releasethreads der Tools im World of Gothic Forum)  
 
 
@@ -122,14 +122,14 @@ Flosha: WorldofGothicLinks.txt angelegt (Linkliste zu den
 
 Flosha: v1.1 integriert alle offiziellen Updates.
 
-* Spacer Update 1.50 hinzugefügt (spacer.exe und 
-  ready.wav in [GOTHIC]system); dieses Update verbessert 
-  die Benutzerführung im Spacer. Hier die Fixes:
+* Spacer Update 1.50 hinzugefügt (spacer.exe und  
+  ready.wav in [GOTHIC]system); dieses Update verbessert  
+  die Benutzerführung im Spacer. Hier die Fixes:  
      - "Division By Zero" abgefangen
-     - Positionierung der Kamera bei Doppelklick 
+     - Positionierung der Kamera bei Doppelklick  
        auf Objekt im Objektbaum gefixt
-     - Die Tastatur hat sich oft "verhakt", wenn man mit 
-         SHIFT+ZIFFERNBLOCK durch die Level raste. 
+     - Die Tastatur hat sich oft "verhakt", wenn man mit  
+         SHIFT+ZIFFERNBLOCK durch die Level raste.  
          Die Ursache ist, dass bei gedrückter SHIFT-Taste sich der 
          Ziffernblock komplett dämlich verhält: 
          Es kommen pro Tastendruck immer zwei KeyDowns beim 
