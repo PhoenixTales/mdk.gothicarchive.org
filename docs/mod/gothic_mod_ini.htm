@@ -1,0 +1,194 @@
+<HTML>
+<HEAD>
+    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+    <TITLE>Gothic-Documents: INI-file for GothicMODs</TITLE>
+    <META NAME="AUTHOR" CONTENT="Bert Speckels">
+    <link rel=stylesheet type="text/css" href="../../style.css">
+</HEAD>
+
+<section class="content">
+
+<!---
+ Kopfzeile
+ --->
+<table width="500" cellpadding=4 cellspacing=0 bgcolor="#262422" border=2>
+<!--- Art des Dokuments und Name des Projekts --->
+<tr>
+        <td width=50% align=left>
+                <font color="#9c9c92"><b>
+                Documentation
+                </b></font>
+        </td>
+        <td width=50% align=right>
+                <font color="#9c9c92"><b>
+                GOTHIC
+                </b></font>
+        </td>
+</tr>
+<!--- Titel des Dokuments --->
+<tr>
+        <td colspan=2 align=center>
+                <font color="#9a5050"><b>
+                The INI-file for GothicMODs
+                </b></font>
+        </td>
+</tr>
+<!--- Name des Autors und Datum der letzten Aktualisierung --->
+<tr>
+        <td width=50% align=left><b>
+                Author: Bert Speckels
+        </b></td>
+        <td width=50% align=right><b>
+                Version:  July 26th 2001
+        </b></td>
+</tr>
+</table>
+<br>
+
+<!---
+ Inhaltsverzeichnis
+ --->
+
+<table width="500" cellpadding=4 cellspacing=0 bgcolor="#191919" border=1>
+<tr>
+<td>
+        <b>Content:</b>
+        <ul>
+        <li><a href="#01"><b>INFO Section</a></b>
+        <li><a href="#02"><b>FILES Section</a></b>
+        <li><a href="#03"><b>SETTINGS Section</a></b>
+        <li><a href="#04"><b>OPTIONS Section</a></b>
+        </ul>
+        </b>
+        <a href="../gothic.htm"><b><i>back to index</i></b></A>
+</td>
+</tr>
+</table>
+<br>
+
+<!---
+ Inhalt
+ --->
+
+<table width="500" cellpadding=4 cellspacing=0 bgcolor="#0f0f0f" border=1>
+<tr>
+<td>
+
+<p>Every Gothic mod is represented through a INI file <b>"modname.ini"</b>.
+This INI file too is to be found in the <u>System directory</u> of Gothic!
+Thereby it is possible that multiple Gothic mods are parallel installed.
+The <a href="../tools/gothic_tools_starter.htm">GothicStarter</a> uses
+this file, to display a selection of all Gothic mods. </p>
+
+
+<a name="01"><H1>INFO Section</H2></A>
+
+<pre>
+[INFO]
+title=FunnyMod
+description=Some funny additions to Gothic
+authors=M.Musterman
+version=0.31
+webpage=http://www.musterpage.de
+</pre>
+
+<p>The INFO-Section stores general informations to the specific Game(mod).
+Title, description, authors, version number and a website can be inserted here.</p>
+
+<a name="02"><H1>FILES Section</H2></A>
+
+<pre>
+[FILES]
+; Dont attach file-extensions to these files.
+game=content\gothic
+fightai=content\fight
+menu=system\menu
+camera=system\camera
+music=system\music
+soundeffects=system\sfx
+particleseffects=system\particlefx
+visualeffects=system\visualfx
+outputunits=content\outputunits\ou
+; List of vdf-files which have been added to the original Gothic
+; [separate them by spaces, include their extension ".mod"]
+vdf=FunnyMod.mod
+</pre>
+
+<p>The FILES-Section includes the most important data. Here all the script files in the
+directory [GOTHIC]/_work/data/scripts are listed, which will be potentially modified.
+All file paths are specified relative to the script directory. It is very important,
+that a file extension is not allowed. It will be added by the programme automatically.</p>
+
+<p>Candidate Nr 1 for an adjustment is the value for "game". This file contains more or less
+all scripts from the content folder. Gothic recognises automatically, whether the file
+<i>system/gothic.src</i> has to be used (and thus has to be compiled anew), or if 
+an up-to-date (compiled) gothic.dat is available in the "_compiled" folder already.</p>
+
+<p>The next candidate is the entry <i>"outputunits"</i>. In our case these are the two 
+files "ou.bin" and "ou.csl".</p>
+
+<p><i>All the other files are not as interesting.</i></p>
+
+<center>
+<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
+<tr><td>
+<b>Especially important:</b><br>
+The entry for <i>"vdf"</i> must specify <u>VDF files</u> that are to be used additionally
+to the ones from GOTHIC. When there are multiple ones, they are separately specified by spaces 
+(FunnyMod1.mod FunnyMod2.mod ...). But we recommend to just use one vdf file.<br>
+For this see also <a href="../mod/gothic_mod.htm">"How do I create a Gothic mod?"</a>.
+</td></tr>
+</table>
+</center>
+
+
+
+<a name="03"><H1>SETTINGS Section</H2></A>
+
+<pre>
+[SETTINGS]
+world=test.zen
+player=PC_HERO
+</pre>
+
+<p>The <i>world</i>-parameter specifies the level (relative to the directory _work/data/worlds/) 
+that is to be loaded when executing "NEW GAME". The variable <i>"player"</i>
+points to a NPC Instance, which is used as player character (PC).
+In our case our well-known "<u>PC_HERO</u>". Diego for instance would be PC_THIEF, 
+the Ricelord would be BAU_900_RICELORD. This way one can specifiy self-made player characters
+or maybe even Mud?! :-)</p>
+
+<a name="04"><H1>OPTIONS Section</H2></A>
+
+<pre>
+[OPTIONS]
+force_parameters=
+force_subtitles=0
+show_info=0
+</pre>
+
+<p>The last section contains diverse additional options:</p>
+
+<p><i>"force_parameters"</i> contains command line parameters, which are 
+automatically used when Gothic is started; without the need to specify them.
+Maybe someone wants that no music is played
+(then. e.g.: "force_parameters=-znomusic").</p>
+
+<p><i>"force_subtitles"</i> should be clear in its meaning.
+If the value is set to 1, it will overwrite the menu options, 
+so that subtitles are shown in every case.
+This makes sense when no acoustic voice output is available.</p>
+
+<p><i>"show_info"</i> shows title and version number in the game menu,
+when the value is set to 1.</p>
+
+<br>
+
+</td>
+</tr>
+</table>
+
+</section>
+
+</BODY>
+</HTML>

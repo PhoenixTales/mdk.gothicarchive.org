@@ -1,0 +1,238 @@
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
+	<TITLE>Gothic-Documents: Gothic Scripts</TITLE>
+	<META NAME="AUTHOR" CONTENT="Ulf Wohlers">
+	<link rel=stylesheet type="text/css" href="../../style.css">
+</HEAD>
+
+<section class="content">
+
+<!---
+ Kopfzeile
+ --->
+<table cellpadding=4 cellspacing=0 bgcolor="#262422" border=2>
+<!--- Art des Dokuments und Name des Projekts --->
+<tr>
+        <td width=50% align=left>
+                <font color="#9c9c92"><b>
+                Documentation
+                </b></font>
+        </td>
+        <td width=50% align=right>
+                <font color="#9c9c92"><b>
+                GOTHIC
+                </b></font>
+        </td>
+</tr>
+<!--- Titel des Dokuments --->
+<tr>
+        <td colspan=2 align=center>
+                <font color="#9a5050"><b>
+                Gothic Scripts
+                </b></font>
+        </td>
+</tr>
+<!--- Name des Autors und Datum der letzten Aktualisierung --->
+<tr>
+        <td width=50% align=left><b>
+                Author: Ulf Wohlers
+        </b></td>
+        <td width=50% align=right><b>
+                Version:  July 15th 2001
+        </b></td>
+</tr>
+</table>
+<br>
+
+<!---
+ Inhaltsverzeichnis
+ --->
+
+<table cellpadding=4 cellspacing=0 bgcolor="#191919" border=1>
+<tr>
+<td>
+        <b>Content:</b>
+		<ul>
+		<li><a href="#01"><b>What is the script language used for?</b></a>
+		<li><a href="#02"><b>Structure of the script language</b></a>
+		<li><a href="#03"><b>Limitations of the script language</b></a>
+		<li><a href="#04"><b>The Externals</b></a>
+		<li><a href="#05"><b>How is the NPC behaviour defined in the scripts?</b></a>
+		<li><a href="#06"><b>How does the NPC arrive at his script states?</b></a>
+		<li><a href="#07"><b>How do I give an NPC instructions in a script state?</b></a>
+		<li><a href="#08"><b>How are NPCs inserted into the world?</b></a>
+        </ul>
+        </b>
+        <a href="../gothic.htm"><b><i>to the index</i></b></A>
+</td>
+</tr>
+</table>
+<br>
+
+<!---
+ Inhalt
+ --->
+
+<table cellpadding=4 cellspacing=0 bgcolor="#0f0f0f" border=1>
+<tr>
+<td>
+<font size=2 face="Verdana,Arial, Helv, Helvetica, SanSerif">
+
+<p>This documentation is supposed to give a short overview of the scripts used in Gothic, with a focus on Gothic mod creation. The basic functionalities are explained shortly and particularities of the script language are pointed out. This documentation is not supposed though to cover the complete scope and all the possibilities of the script language, but to make it easier getting started and to point out some tricks. Many trivias, which will not be explained here, are apparent in the released scripts from the "Gothic Mod Kit". See also the documentation on the <a href="gothic_skriptsprache.htm">Syntax of the script language</a></p>
+
+
+<a name="01"><H1>What is the script language used for?</H1></a>
+
+<p>
+The script language in Gothic serves various functions. The most important ones are:
+<ul>
+<li> Setting properties of items and non player characters (NPCs).
+<li> Setting the NPC - AI. The behaviour at specific player actions (scripts executed via specific perceptions).
+<li> Defining the NPC - daily routines.
+<li> Directing dialogues with NPCs.
+<li> Defining the effects of magic.
+<li> Camera behaviour in specific situations.
+<li> Setting the looks of particle effects.
+<li> Setting characteristics of sound effects.
+<li> menu presentation
+<li> etc.
+</ul>
+</p>
+
+<p>The single script files have the extension ".d" (D-File). These are normal text files and contain the script source, which is then translated by a parser and saved in the compiled format on the hard drive as a file with the extensiong ".DAT".
+You inform Gothic which script files have to be translated in a file with the extension ".SRC". This again is a normal text file, in which the files to be parsed are listed. Sub directories and wildcards are allowed here. The order of the files stated there can become important, as several symbols must be defined before others. The class definitions and global constants should always be parsed first, as most other script files refer to them.</p>
+
+
+<a name="02"><h1>Structure of the Script language</h1></a>
+
+<p>The script language uses so-called "classes", that define which attributes of game objects are queriable or useable.</p>
+
+<p>Such classes begin with the keyword <font class="cmd">CLASS</font> and <u>must not be changed</u>. They constitute the intersection between the script and the actual programme (Gothic) and therefore they need to correspond exactly. If the variable types or the order of variables should be changed regardless, Gothic will behave in unforeseeable ways or crash in the worst case; as Gothic writes the values to the wrong position... </p>
+
+<p>The  individual classes are to be found in the folder "content\_intern" in the file "classes.d". There you also find a short description of the individual variables (well, at least of some).</p>
+
+<p>Important classes are:
+<pre>
+C_NPC  (Which properties of an NPC can one change in the scripts)
+C_ITEM (Which properties of items can one change in the scripts)
+C_INFO (An information that can be output during a dialogue)
+</pre>
+
+<p>Classes are worthless of course without the <u>instances</u> of the respective classes. Instances are objects of this class occuring in the game, e.g. an NPC in the game is an instance of the class "C_NPC".</p>
+
+<p>Instances are initiated with the keyword <font class="cmd">INSTANCE</font>. Here the properties of the object will be set, by initialising the individual variables, that were set in the class, with values. Every D-file in the folder "story/npc/" initialises an NPC appearing in the game this way.</p>
+
+
+<a name="03"><H1>Limitations of the script language</H1></a>
+
+
+<p>The Gothic script language has some limitations and particularities, that may be interesting especially for users with programming experience:
+<ul>
+<li> There are no FOR- or WHILE- loops.
+<li> The operator precedence is in accordance with the one of C++.
+<li> Some assignment operators for integer-types do not exist (+=, -=,..).
+<li> Some single array elements can only be accessed with a constant as index:               
+        allowed is "ArrayName[10] = 1234", error message with "ArrayName[VarName] = 1234".
+<li> Arrays can not be given as function parameters.
+<li> The assignment operator is only in regard to floating-point numbers (calculations with FLOATs aren't possible).
+<li> All global variables or variables defined locally in the functions are automatically initialised with zero. This also applies to idle variables for most instances.
+<li> Local variables in functions are handled like global variables and keep their value when exiting the function. That said, they are not generated temporarily and subsequently deleted again, as it is the case in C++.
+</ul>
+</p>
+
+<a name="04"><h1>The Externals</h1></a>
+
+<p>The "Externals" or "BuildIn" functions provide functionalities, which would be just hard to implement in the script. Gothic provides a set of functions here, which can be called from within the script language. A list of these functions with a short description is located in the "content\AI\AI_intern\externals.d" file.</p>
+
+<a name="05"><h1>How is the NPC behaviour defined in the scripts?</h1></a>
+ 
+<p>Most NPCs in Gothic are script controlled. Every NPC is in a script state, that defines their behaviour. These script states underly specific conventions, that necessarily must be complied with.</p>
+
+<p>A script state regularly consists of three script functions, that divide the state into three phases. The first phase is the "Begin"-phase. Here all the preparing commands for the npc actions are given, e.g. first letting the npc go to the destination point, at which he is supposed to perform his actions.</p>
+
+<p>The second phase is the "Loop"-phase. As long as the NPC is in this state, the script function will be executed over and over and the NPC repeats the actions programmed therein, until the state gets stopped or cancelled. Optionally, this phase can also give a return value, which indicates whether this state should be stopped or not. Is the return value greater than Null, the state will be stopped and the "End"-phase will be called.</p>
+
+<p>The last phase is the "End"-phase. Here the still necessary script commands get disposed, to let the NPC stop the action cleanly, e.g. standing up, after he has been sitting on a bench.</p>
+
+<p>The names of the three script functions, which together make the script state, need to begin with "ZS_" always. And for the respective state phases, specific extensions have to be appended to the function name. The three script functions generally look like this in the script:</p>
+
+<pre>
+FUNC VOID ZS_[Statename] ()
+{
+	// This is the Begin-phase.
+	// It is passed through only once 
+        // at the start of the state.
+};
+
+FUNC VOID ZS_[Statename]_LOOP ()
+{
+	// This is the Loop-phase.
+	// It is repeated until 
+        // the state is cancelled
+	// or stopped.
+};
+
+
+FUNC VOID ZS_[Statename]_END () 
+{
+	// The End-phase.
+	// Letting the NPC end his action.
+};
+</pre>
+
+<p>
+For instance, you can find a simple script state in the script file "content\story\zs\zs_guard.d".
+</p>
+
+
+<a name="06"><h1>How does the NPC arrive at his script states</h1></a>
+
+<p>Many NPCs have a daily routine, in which is defined at which ingame time which script state has to be executed. A good example for this is to be found in the file "content\story\npc\bau_904_bauer.d". In the script method "Rtn_start_904" the routine of the NPC is defined. Through the "TA_"-commands additional script methods are called here; which then commit the state, that the NPC is supposed to perform at this hour, to Gothic, via the Build-In-Function. Such NPCs are then routine controlled.</p>
+
+<p>Many monsters are state controlled and only have a state (routines are precious, because these have to be precalculated by Gothic), as to be seen in the monster scripts.
+At game start Gothic starts the script states of the NPCs according to their routine or respectively the routine state for the monsters.</p>
+
+<p>The NPC can be "ripped out" of his current state through <u>Perceptions</u>. For example he discovers the player stealing, sees a monster or a fight. These are perceptions, that can lead to a state change. In the Begin-phase of the state the NPC is informed to which perceptions the NPC has to react. Here the script state, which has to be activated at the appearance of the respective perception, is informed via the Build-In command "Npc_PercEnable". When the perception occurs in the course of the state, the NPC switches into the corresponding new state. Of course it is also possible to change the state "by hand". This can be achieved with the Build-In function "AI_StartState".</p>
+
+
+<a name="07"><H1>How do I give an NPC instructions in a script state?</H1></a>
+
+<p>For this purpose the Build-In functions exist, which begin with the shortcut "AI_". Here more complex NPC actions are possible (for this see the "externals.d" file), which extend over a longer duration, that is: those that take longer than a frame, e.g. going to a destination point, sitting down on a bench, etc.<br> 
+Since a script method is always completely processed in one frame, these AI commands are stored in a list and there they are processed one after another (insofar the NPC doesn't get interrupted by a perception). Only thereafter the next script state method is called.</p>
+
+<p>There are some global variables over which the NPC and other important objects can be addressed in the script. In the states this is always the "self"-variable, which contains the actual NPC currently performing this state. These variables are initialised automatically by Gothic.</p>
+
+<p>When a state is activated through a perception, depending on the perception additional variables are added, that you can use for Queries:</p>
+
+<pre>
+C_NPC hero   : This variable always contains the current player
+C_NPC self   : The current NPC processing this state
+C_NPC other  : The perceived NPC (e.g. the player in dialogues, perpetrator)
+C_NPC victim : Victim of the perceived action (e.g. npc attacked by a third)
+C_ITEM item  : The perceived item
+</pre>
+	
+<p>If one of these variables was initialised by Gothic and is valid in the script function, one can enquire with the Build-In method "Hlp_IsValidNpc" or "Hlp_IsValidItem".
+These global variables are to be found in the file "content\_intern\classes.d" and must not be changed.</p>
+
+
+<a name="08"><h1>How are NPCs inserted into the world?</h1></a>
+
+<p>NPCs are inserted into the world with the help of the scripts. For this, when starting a game or entering a level, script methods are called automatically, in which the NPCs should be included.</p>
+
+<p>The first of these script functions is the startup function. It is executed once at game start or when entering a level. Here the NPCs occuring in that level are inserted at a waypoint. But if the NPC has a daily routine, Gothic (or the routine projection) may insert him at another location, in accordance with the routine.</p>
+
+<p>The name of this script function consists of the prefixed "STARTUP_" and the name of the respective Level-Zen-file.<br>
+An additional function is the Init function (Name: Init_[Zen-File-Name]). It is called at each (also repeated) Entry of a level and should not be used for the Insertion of NPCs, since otherwise they would be inserted in the level over and over again for each entry in the level...<br>
+The actual Insertion of NPCs occurs with the Build-In method "Wld_InsertNpc". There the instance name and the waypoint are declared as parameters, to be seen in the "content\story\startup.d" file.</p>
+
+</td>
+</tr>
+</table> 
+
+</section>
+
+
+</BODY>
+</HTML>

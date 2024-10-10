@@ -1,0 +1,24 @@
+title: GOTHIC MDK
+description: Gothic Mod Development Kit by Piranha Bytes and the Mad Scientists, updated and curated by Phoenix Tales
+author: Mad Scientists, Piranha Bytes, Phoenix Tales
+theme: null
+layouts_dir: ./_templates
+includes_dir: ./_templates
+paginate: 4
+paginate_path: "/:num"
+permalink: /:year/:month/:day/:title
+exclude: [ media, vendor ]
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+collections:
+  category:
+    output: true
+plugins:
+  - github-pages
+  - jekyll-sitemap
+  - jekyll-feed
