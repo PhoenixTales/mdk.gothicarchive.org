@@ -30,6 +30,7 @@ body {
 
 header {
   max-width: 200px;
+  font-size: 16px;
   margin: 0 auto;
   font-family: "IBM VGA 8x16", monospace;
 }
@@ -307,14 +308,10 @@ a img {
   border: 2px solid black;
 }
 
-body{font-family:verdana,helvetica;font-size:10pt;}
-p{font-family:verdana,helvetica;font-size:10pt;}
-li{font-family:verdana,helvetica;font-size:10pt;}
-                                       
-table{font-family:verdana,helvetica;font-size:10pt;}
-tr{font-family:verdana,helvetica;font-size:10pt;}
-td{font-family:verdana,helvetica;font-size:10pt;}
-th{font-family:verdana,helvetica;font-size:10pt;}
+body main, main p, main li, main table, main tr, main td, main th {
+  font-family: verdana, helvetica;
+  font-size: 10pt;
+}
 
 /*
 H1{font-family:verdana,helvetica;font-size:16pt;}
