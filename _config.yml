@@ -5,6 +5,16 @@ include:
   - "_img"
   - "docs"
 theme: null
+layouts_dir: ./wiki/templates
+includes_dir: ./wiki/templates
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
 
 livereload: true # Rebuilds the site and reloads the page.
 force_polling: true # "livereload" doesn't work without this on wsl.
