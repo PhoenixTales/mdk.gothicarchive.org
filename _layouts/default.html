@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>{{site.title}} | {{page.title}}</title>
+        <link rel=stylesheet type="text/css" href="/style.css">
+        <link rel="icon" type="image/x-icon" href="/_img/gmdk.ico" />
+    </head>
+    
+    <body>
+      <nav>
+        <div class="menu-wrapper">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle">
+                <span class="menu-icon">&#8801;</span>
+                <p class="menu-title">Menu</p>
+            </label>
+    
+            <section class="header">
+              <span><a href="https://phoenixthegame.com">PhoenixTales</a></span>
+              <ul>
+                <li><a href="https://github.com/PhoenixTales" target="_blank">Git</a></li>
+              </ul>
+            </section>
+        </div>
+    
+        <section class="menu">
+          {% capture nav %}{% include nav.md %}{% endcapture %}
+          {{ nav | markdownify }}
+        </section>
+      </nav>
+      
+      <main>
+        <section class="article">
+          {{ content }}
+        </section>
+      </main>
+      
+      <div class="dir">
+        <a href="{{page.dir}}">{{page.dir}}</a><span>{{page.name}}</span>
+      </div>
+      {% include footer.html %}
+    </body>
+</html>
