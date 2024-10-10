@@ -342,6 +342,8 @@ label[for="menu-toggle"]  {
   .menu {
     margin-bottom: 2em; 
     background: #000000e0;
+    min-width: none;
+    width: 100%;
     z-index: 2;
   }
 
@@ -349,7 +351,6 @@ label[for="menu-toggle"]  {
     overflow: hidden;
     height: 338px;
     width: unset; 
-    padding-bottom: 0;
   }
 
   header img {
