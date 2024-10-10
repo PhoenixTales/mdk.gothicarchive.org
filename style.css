@@ -27,7 +27,6 @@ body {
     min-width: 0;
 }
 
-
 header {
   max-width: 200px;
   font-size: 16px;
@@ -351,8 +350,7 @@ and (max-width: 900px) {
 
   .menu header {
     overflow: hidden;
-    height: 338px;
-    width: unset; 
+    width: 100%; 
   }
 
   header img {
