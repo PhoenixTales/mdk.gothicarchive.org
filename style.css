@@ -22,6 +22,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     padding: 0 4em;
+    margin: 0;
     gap: 5em;
     align-items: stretch;
     min-width: 0;
@@ -30,12 +31,12 @@ body {
 header {
   max-width: 200px;
   font-size: 16px;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
   font-family: "IBM VGA 8x16", monospace;
 }
 
 header img {
-  width: 100%;
+  max-width: 230px;
 }
 
 footer {
@@ -124,6 +125,7 @@ header h1 {
   padding: 0.5em;
   display: block;
   text-align: center;
+  max-width: 200px;
 }
 
 header a:link h1:hover {
@@ -349,9 +351,12 @@ and (max-width: 900px) {
   }
 
   .menu {
+    position: absolute;
+    display: flex;
     margin: 0; 
     background: #000000e0;
     min-width: initial;
+    max-width: 100%;
     width: 100%;
     z-index: 2;
   }
@@ -366,6 +371,10 @@ and (max-width: 900px) {
     /*margin-left: calc(50vw - 160px);*/
     position: relative;
     top: 43px;
+  }
+
+  header h1 {
+    margin: 2.5em 1em 2em;
   }
 
   label[for="menu-toggle"] {
@@ -404,15 +413,15 @@ and (max-width: 900px) {
     margin-bottom: 81px;
   }
 
-  .menu-title {
-    margin-t
-  }
-
   main {
     position: absolute;
     max-width: 100%;
-    top: 320px;
+    top: 280px;
     padding: 0 1em;
+  }
+
+  footer {
+    padding: 0 0.5em;
   }
 }
 
