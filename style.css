@@ -105,6 +105,10 @@ pre {
   white-space: pre-wrap;
 }
 
+nav {
+  width: 100%;
+}
+
 .content pre {
 	padding: 0;
 	margin: 0;
@@ -291,8 +295,6 @@ a img {
 
 /* Scrollbar */
 *::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
   background: #101010;
 }
 
@@ -334,7 +336,6 @@ label[for="menu-toggle"]  {
   display: none;
 }
 
-
 @media only screen
 and (max-width: 900px) {
 
@@ -348,7 +349,7 @@ and (max-width: 900px) {
   }
 
   .menu {
-    margin-bottom: 2em; 
+    margin: 1em 0 1em; 
     background: #000000e0;
     min-width: initial;
     width: 100%;
@@ -373,15 +374,13 @@ and (max-width: 900px) {
     padding-left: 1em;
     color: #a1a582;
     font-size: 18px;
-    font-weight: 700;
-    border: 1px solid;
-    width: 200px;
+    /*border: 1px solid;*/
+    width: 100%;
     user-select: none;
-    margin-left: calc(50vw - 60px);
     cursor: pointer;
     padding-bottom: 2px;
-    position: relative;
-    top: 25px;
+    position: absolute;
+    top: 0px;
     z-index: 21;
     background: #000000e0;
   }
@@ -403,6 +402,10 @@ and (max-width: 900px) {
 
   #menu-toggle:checked ~ label[for="menu-toggle"]{
     margin-bottom: 81px;
+  }
+
+  .menu-title {
+    margin-t
   }
 
   main {
