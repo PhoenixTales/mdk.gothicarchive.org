@@ -349,7 +349,7 @@ and (max-width: 900px) {
   }
 
   .menu {
-    margin: 1em 0 1em; 
+    margin: 0; 
     background: #000000e0;
     min-width: initial;
     width: 100%;
