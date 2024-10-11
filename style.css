@@ -77,7 +77,7 @@ ul.copyright li {
 }
 
 .index, .content {
-  margin: 4em 0;
+  margin: 4em 0 1em;
   max-width: 500px;
   min-width: 400px;
 }
@@ -309,6 +309,11 @@ a img {
   border: 2px solid black;
 }
 
+main { 
+  max-width: 100%;
+  padding: 0 4em;
+}
+
 .article, .article p, .article li, .article table, .article tr, .article td, .article th {
   font-family: verdana, helvetica;
   font-size: 10pt;
@@ -337,7 +342,9 @@ and (max-width: 900px) {
     /*display: flex;
     flex-wrap: wrap;
     justify-content: center;*/
-    padding: 0 2em;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .menu {
@@ -400,8 +407,9 @@ and (max-width: 900px) {
 
   main {
     position: absolute;
-    top: 430px;
-    margin-top: 0;
+    max-width: 100%;
+    top: 320px;
+    padding: 0 1em;
   }
 }
 
