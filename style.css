@@ -29,14 +29,13 @@ body {
 }
 
 header {
-  max-width: 200px;
   font-size: 16px;
   /*margin: 0 auto;*/
   font-family: "IBM VGA 8x16", monospace;
 }
 
 header img {
-  max-width: 230px;
+  max-width: 220px;
 }
 
 footer {
@@ -296,9 +295,11 @@ a img {
   background: #101010;
 }
 
+/*
 *::-webkit-scrollbar-track-piece {
   background-color: rgba(0 0 0 / 70%);
 }
+*/
 
 *::-webkit-scrollbar-track {
   background: #101010;
@@ -344,6 +345,7 @@ and (max-width: 900px) {
     padding: 0;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 0;
   }
 
   nav {
@@ -352,7 +354,6 @@ and (max-width: 900px) {
 
   .menu {
     position: absolute;
-    display: flex;
     margin: 0; 
     background: #000000e0;
     min-width: initial;
@@ -362,8 +363,10 @@ and (max-width: 900px) {
   }
 
   .menu header {
-    overflow: hidden;
     width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   header img {
