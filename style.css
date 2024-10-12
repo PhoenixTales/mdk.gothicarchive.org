@@ -16,16 +16,18 @@ html {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   line-height: 1.4;
   min-width: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    display: flex;
-    flex-wrap: nowrap;
-    padding: 0 4em;
-    margin: 0;
-    gap: 5em;
-    align-items: stretch;
-    min-width: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0 4em;
+  margin: 0;
+  gap: 5em;
+  align-items: stretch;
+  min-width: 0;
 }
 
 header {
