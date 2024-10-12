@@ -185,16 +185,12 @@ header a:hover {
 .hub a:link { color: #ac876d; }
 .hub a:visited { color: #ac876d; }
 
-
-
-
 .menu h2 {
   margin-top: 5em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
 }
-
 
 .menu .download {
   margin-top: 4em;
@@ -428,6 +424,8 @@ and (max-width: 900px) {
 
   footer {
     padding: 0 0.5em;
+    display: flex;
+    justify-content: center;
   }
 }
 
