@@ -150,9 +150,9 @@ header a:hover {
 
 .about h2 {
   display: inline-block;
-  /*padding: 0;*/
+  padding: 0 0.5em;
   margin-top: -1.8em;
-  background: #000;
+  /*background: #000;*/
   text-transform: uppercase;
   color: #9a5050;
   letter-spacing: 0.4em;
