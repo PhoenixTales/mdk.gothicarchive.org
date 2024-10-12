@@ -256,9 +256,9 @@ header a:visited { text-decoration: none; }
 
 /* LINKS */
 
-a:link { color: #84bc9a; }
-a:visited { color: #84bc9a; }
-a:active { color: #505a53; }
+a:link, header a:link { color: #84bc9a; }
+a:visited, header a:link { color: #84bc9a; }
+a:active, header a:link { color: #505a53; }
 
 a, a:link, a:active, a:visited {
   text-decoration: none;
