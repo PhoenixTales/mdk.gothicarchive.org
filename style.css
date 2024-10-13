@@ -9,13 +9,18 @@
   font-size: 16px;
 }
 
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
 html {
   background-color: #000;
   color: #7a7875;
-  font-size: 12px; 
+  font-size: 12px;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
   line-height: 1.4;
-  min-width: 0;
   padding: 0;
   margin: 0;
 }
@@ -65,6 +70,7 @@ ul.copyright {
   margin: 1em 0;
   padding: 0;
 }
+
 ul.copyright li {
   font-size: 10px;
   color: #393939;
@@ -73,18 +79,20 @@ ul.copyright li {
 
 .content {
   font-family: "Verdana, Arial, Helv, Helvetica, SanSerif";
- 
+
   margin: 4em 0;
   max-width: 500px;
 }
 
-.index, .content {
+.index,
+.content {
   margin: 4em 0 1em;
   max-width: 500px;
   min-width: 400px;
 }
 
-.index table, .content table {
+.index table,
+.content table {
   width: 100%;
   margin-bottom: 1.5em;
 }
@@ -184,8 +192,13 @@ header a:hover {
   margin-bottom: 2em;
 }
 
-.hub a:link { color: #ac876d; }
-.hub a:visited { color: #ac876d; }
+.hub a:link {
+  color: #ac876d;
+}
+
+.hub a:visited {
+  color: #ac876d;
+}
 
 .menu h2 {
   margin-top: 5em;
@@ -229,12 +242,17 @@ header a:hover {
   display: inline-block;
 }
 
-header a:link { text-decoration: none; }
-header a:visited { text-decoration: none; }
+header a:link {
+  text-decoration: none;
+}
+
+header a:visited {
+  text-decoration: none;
+}
 
 
 .selected {
- font-weight: bold;
+  font-weight: bold;
 }
 
 .phoenix-ascii {
@@ -242,15 +260,22 @@ header a:visited { text-decoration: none; }
   display: block;
   margin: 4em auto;
 }
-  
+
 /* red text for notes of primary importance */
-.primenote { color: #9a5050; }
+.primenote {
+  color: #9a5050;
+}
 
 /* blue text for notes of secondary importance */
-.secnote { color: #7ca6cf; }
+.secnote {
+  color: #7ca6cf;
+}
 
 /* important table */
-.imptable { background: #a1a582; color: #000; }
+.imptable {
+  background: #a1a582;
+  color: #000;
+}
 
 
 /* LINKS */
@@ -261,11 +286,23 @@ a:visited { color: #84bc9a; }
 a:active { color: #505a53; }
 */
 
-a:link, a:visited { color: #a1a582; }
-.imptable a:visited { color: #003972; }
-a:active { color: #505a53; }
+a:link,
+a:visited {
+  color: #a1a582;
+}
 
-a, a:link, a:active, a:visited {
+.imptable a:visited {
+  color: #003972;
+}
+
+a:active {
+  color: #505a53;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
   text-decoration: none;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -274,24 +311,35 @@ a, a:link, a:active, a:visited {
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-a.pt:link { color: #fdc698; }
+a.pt:link {
+  color: #fdc698;
+}
 
 a img {
-    opacity: 1;
-      -webkit-transition: .4s ease-in-out;
-      transition: .4s ease-in-out;
-  }
-    a:hover img { opacity: 0.6; }
+  opacity: 1;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+}
 
+a:hover img {
+  opacity: 0.6;
+}
 
 ::selection {
   background: #2d3a34;
 }
 
 /* Scrollbar */
+
+@supports not selector(::-webkit-scrollbar) {
+  nav, html {
+    scrollbar-color: #424242 #101010;
+  }
+}
+
 *::-webkit-scrollbar {
   background: #101010;
 }
@@ -311,12 +359,18 @@ a img {
   border: 2px solid black;
 }
 
-main { 
+main {
   max-width: 100%;
   padding: 0 4em;
 }
 
-.article, .article p, .article li, .article table, .article tr, .article td, .article th {
+.article,
+.article p,
+.article li,
+.article table,
+.article tr,
+.article td,
+.article th {
   font-family: verdana, helvetica;
   font-size: 10pt;
 }
@@ -324,21 +378,34 @@ main {
 /*
 H1{font-family:verdana,helvetica;font-size:16pt;}
 H2{font-family:verdana,helvetica;font-size:14pt;}*/
-H3{font-family:serif;font-size:12pt;}
-H4{font-family:serif;font-size:10pt;}
-     
-font.cmd {font-family:Courier New;font-size:12pt;}
-div.ende{font-family:verdana,helvetica;font-size:8pt;text-align:center;}
+H3 {
+  font-family: serif;
+  font-size: 12pt;
+}
+
+H4 {
+  font-family: serif;
+  font-size: 10pt;
+}
+
+font.cmd {
+  font-family: Courier New;
+  font-size: 12pt;
+}
+
+div.ende {
+  font-family: verdana, helvetica;
+  font-size: 8pt;
+  text-align: center;
+}
 
 
-#menu-toggle,
-label[for="menu-toggle"]  {
+.menu-toggle-btn,
+#menu-toggle {
   display: none;
 }
 
-@media only screen
-and (max-width: 900px) {
-
+@media only screen and (max-width: 900px) {
   body {
     /*display: flex;
     flex-wrap: wrap;
@@ -349,53 +416,66 @@ and (max-width: 900px) {
     gap: 0;
   }
 
+  body:has(#menu-toggle:checked) {
+    overflow: hidden;
+  }
+
+  body:has(#menu-toggle:checked) nav {
+    height: 100dvh;
+    overflow: auto;
+    position: fixed;
+
+    /* Set these styles only when opening the nav, because otherwise, due to the backdrop-filter property, a stacking context will be formed, and with it the nav element will become the containing block of the elements like .menu-toggle-btn, and it won't act as a fixed element relative to the viewport anymore, but to the nav itself. */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  body:has(#menu-toggle:checked) .menu-toggle-btn {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+  }
+
+  body:has(#menu-toggle:checked) header {
+    margin-top: 0;
+  }
+
+  body:has(#menu-toggle:checked) .menu-index {
+    display: block;
+  }
+
   nav {
+    height: initial;
+    overflow: initial; /* Having this set to "initial", makes it so the scroll position will be restored when the mobile navigation is opened again, otherwise it is reset each time the .main-nav is closed. (For some reason) */
     width: 100%;
   }
 
-  .menu {
-    position: absolute;
-    margin: 0; 
-    background: #000000e0;
-    min-width: initial;
-    max-width: 100%;
+  .menu-toggle-btn {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  .menu-toggle-btn {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
-    z-index: 2;
-  }
-
-  .menu header {
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  header img {
-    margin: 0;
-    /*margin-left: calc(50vw - 160px);*/
-    position: relative;
-    top: 43px;
-  }
-
-  header h1 {
-    margin: 2.5em 1em 2em;
+    z-index: 10;
+    line-height: 1;
+    padding: 8px 0;
   }
 
   label[for="menu-toggle"] {
-    display: block;
     text-transform: uppercase;
     padding-left: 1em;
     color: #a1a582;
     font-size: 18px;
     /*border: 1px solid;*/
-    width: 100%;
     user-select: none;
     cursor: pointer;
-    padding-bottom: 2px;
-    position: absolute;
-    top: 0px;
-    z-index: 21;
-    background: #000000e0;
   }
 
   label[for="menu-toggle"]::selection {
@@ -403,38 +483,52 @@ and (max-width: 900px) {
     color: inherit;
   }
 
-  label[for="menu-toggle"] > .menu-icon {
+  label[for="menu-toggle"]>.menu-icon {
     font-size: 150%;
     position: relative;
     top: 3px;
   }
 
-  #menu-toggle:not(:checked) ~ *:not(label[for="menu-toggle"]) {
+  .menu {
+    margin: 0;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 43px; /* 43px is the "intrinsic" height of the .menu-toggle-btn, so it should be changed in case the btn's height is changed */
+  }
+
+  .menu-index {
     display: none;
   }
 
-  #menu-toggle:checked ~ label[for="menu-toggle"]{
-    margin-bottom: 81px;
+  header img {
+    /*margin-left: calc(50vw - 160px);*/
+  }
+
+  header h1 {
+    margin: 0 1em 2em;
+  }
+
+  .download {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   main {
-    position: absolute;
-    max-width: 100%;
-    top: 280px;
     padding: 0 1em;
+  }
+
+  .index,
+  .content {
+    min-width: initial;
   }
 
   footer {
     padding: 0 0.5em;
     display: flex;
     justify-content: center;
-  }
-}
-
-@supports (backdrop-filter: blur(10px)) {
-  .menu,
-  label[for="menu-toggle"] {
-    backdrop-filter: blur(10px);
-    background: #000000dd;
   }
 }
