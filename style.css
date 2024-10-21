@@ -152,8 +152,9 @@ a:hover img {
 /* Nav */
 
 nav {
-  min-width: 250px;
+  width: 300px;
   margin: 4em 0;
+  flex-shrink: 0;
 }
 
 nav ul li {
@@ -407,7 +408,7 @@ footer {
 
 /* Mobile Screen */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 920px) {
   body {
     padding: 0;
     flex-wrap: wrap;
