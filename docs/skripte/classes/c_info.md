@@ -32,16 +32,16 @@ title: C_INFO
   border-bottom: 1px solid #808080;
 }
 .doc-info li {
-  padding: 0 7px 0;
+  padding: 0 7px;
 }
 /* first child */
 .doc-info li:nth-child(1)::before {
-  content: "Author:"
+  content: "Author:";
   padding-right: 3px;
 }
 /* second child */
 .doc-info li:nth-child(2)::before {
-  content: "Version:"
+  content: "Version:";
   padding-right: 3px;
 }
 
