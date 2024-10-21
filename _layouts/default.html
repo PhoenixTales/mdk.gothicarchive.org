@@ -11,7 +11,7 @@
     <body>
 
       <nav>
-        <div class="menu-toggle-btn">
+        <div class="menu-bar">
           <input type="checkbox" id="menu-toggle">
           <label for="menu-toggle">
               <span class="menu-icon">&#8801;</span>
@@ -19,13 +19,12 @@
           </label>
         </div>
         
-        <div class="menu">
-            <header>
-              <img src="/_img/mdk4.png" alt="Gothic MDK Logo">
-              <a href="/"><h1>Gothic MDK v1.4.1</h1></a>
-            </header>
-            <div class="menu-index">{% include nav.html %}</div>
-        </div>
+        <header>
+          <img src="/_img/mdk4.png" alt="Gothic MDK Logo">
+          <a href="/"><h1>Gothic MDK v1.4.1</h1></a>
+        </header>
+
+        <div class="menu-index">{% include nav.html %}</div>
       </nav>
       
       <main>
