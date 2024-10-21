@@ -14,7 +14,7 @@ title: C_INFO
   text-align: center;
   border-bottom: 1px solid #808080;
   padding: 5px;
-  margin: -7px -6px;
+  margin: -7px -7px; /* needed to overcome the article padding */
 }
 
 .article h2 {
