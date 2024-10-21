@@ -41,13 +41,13 @@ The `C_INFO` class is used to define dialogues in the game.
 
 ## Class definition
 
-Class definition as it is defined in the [Scripts/Content/_intern/Classes.d](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
+Class definition as it is defined in the [Scripts/Content/_intern/Classes.d](https://github.com/PhoenixTales/gothic-devkit/blob/HEAD/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
 
 
 ### C_Info Daedalus class
 
 <!-- TODO: We somehow have to include some form of automatic syntax highlighting -->
-```c++ 
+```
 CLASS C_Info
 {
     var int    npc;         // npc instance has the dialogue
@@ -63,7 +63,6 @@ CLASS C_Info
 
 ## Class members 
 
-```
 | Variable                    | Type   | Description                                                                         |
 |-----------------------------|--------|-------------------------------------------------------------------------------------|
 | [npc](#npc)                 | int    | npc instance to have the dialogue                                                   |
@@ -74,7 +73,6 @@ CLASS C_Info
 | [description](#description) | string | text shown in the dialogue box                                                      |
 | [trade](#trade)             | int    | is it a trade dialogue                                                              |
 | [permanent](#permanent)     | int    | does the dialogue stay after being played once                                      |
-```
 
 ### Class member overview
 
@@ -84,7 +82,7 @@ Description of the class member variables.
 
 Sets what NPC will have this dialogue instance. Set a NPC instance.
 
-```c++
+```
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
 	npc	= PC_Thief; // NPC instance for Diego
@@ -132,39 +130,39 @@ If there are multiple important dialogues that satisfy their condition function,
 
 Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it return `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Condition`.
 
-=== "Conditioned dialogue"
-    ```c++
-    INSTANCE Info_Diego_Gamestart (C_INFO)
-    {
-        // ...
-        condition   = Info_Diego_Gamestart_Condition;
-        // ...
-    };
+Conditioned dialogue:
+```
+INSTANCE Info_Diego_Gamestart (C_INFO)
+{
+// ...
+condition   = Info_Diego_Gamestart_Condition;
+// ...
+};
 
-    FUNC INT Info_Diego_Gamestart_Condition()
-    {
-        if (Kapitel < 2) // Show only when chapter is less than 2
-        {
-            return TRUE;
-        };
-        return FALSE; // Not needed, but added for readability
-    };
-    ```
+FUNC INT Info_Diego_Gamestart_Condition()
+{
+if (Kapitel < 2) // Show only when chapter is less than 2
+{
+    return TRUE;
+};
+return FALSE; // Not needed, but added for readability
+};
+```
 		
-=== "Unconditioned dialogue"
-    ```c++
-    INSTANCE Info_Diego_EXIT_Gamestart(C_INFO)
-    {
-        // ...
-        condition = Info_Diego_EXIT_Gamestart_Condition;
-        // ...
-    };
+Unconditioned dialogue:
+```
+INSTANCE Info_Diego_EXIT_Gamestart(C_INFO)
+{
+// ...
+condition = Info_Diego_EXIT_Gamestart_Condition;
+// ...
+};
 
-    FUNC INT Info_Diego_EXIT_Gamestart_Condition()
-    {
-        return TRUE; // or return 1;
-    };
-    ```
+FUNC INT Info_Diego_EXIT_Gamestart_Condition()
+{
+return TRUE; // or return 1;
+};
+```
 
 It is not necessary to return `FALSE` from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is `FALSE`.
 {: .tip }
@@ -175,7 +173,7 @@ It is not necessary to return `FALSE` from dialogue conditions, but in other cas
 
 The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Info`.
 
-```c++
+```
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
     npc         = PC_Thief;
@@ -211,7 +209,7 @@ FUNC VOID Info_Diego_Gamestart_Info()
 
 Specify a string that will be shown in the dialogue window.
 
-```c++
+```
 instance DIA_XARDAS_GMC(C_INFO)
 {
     // ...
@@ -226,7 +224,8 @@ instance DIA_XARDAS_GMC(C_INFO)
 
 If `trade` is set to `TRUE` the trading interface will be launched after the content `information` function is finished.
 
-```c++ title="Fisk's trade dialogue"
+Fisk's trade dialogue:
+```
 instance  Stt_311_Fisk_Trade (C_INFO)
 {
     npc         = Stt_311_Fisk;
