@@ -438,6 +438,7 @@ footer {
     background: rgba(0, 0, 0, 0.8);
   }
 
+  body:has(#menu-toggle:checked) nav,
   .menu-bar {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -462,6 +463,9 @@ footer {
   }
 
   label[for="menu-toggle"] {
+    display: flex;
+    gap: 5px;
+    align-items: center;
     text-transform: uppercase;
     padding-left: 1em;
     color: #a1a582;
@@ -476,10 +480,12 @@ footer {
     color: inherit;
   }
 
-  label[for="menu-toggle"]>.menu-icon {
+  .menu-icon {
     font-size: 150%;
-    position: relative;
-    top: 3px;
+  }
+
+  .menu-title {
+    padding-top: 2px;
   }
 
   header {
