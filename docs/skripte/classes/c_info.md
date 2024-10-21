@@ -260,18 +260,15 @@ FUNC VOID Info_Diego_Gamestart_Info()
 
 ### description
 
-Specify a string that will be shown in the dialogue window.
+Specify a string that will be shown in the dialogue window as a selectable option for the player.
 
 ```
-instance DIA_XARDAS_GMC(C_INFO)
+instance DIA_READER_HELLO(C_INFO)
 {
     // ...
-	description = "Hello, is this the GMC site?";
+	description = "Hello, is this you, the reader?";
 };
 ```
-
-![Description](../../../img/c_info_description.png)
-
 
 ### trade
 
