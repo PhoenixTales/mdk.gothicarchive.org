@@ -22,14 +22,17 @@ title: C_INFO
 
 /* Author + Date/Version Section */
 	
-.author, .date {
+.doc-info {
   font-weight: bold;
+  display: flex;
 }
-.author:before {
+/* first child */
+.doc-info:first-child::before {
   content: "Author:"
   padding-left: 3px;
 }
-.date:before {
+/* second child */
+.doc-info:second-child::before {
   content: "Version:"
   padding-left: 3px;
 }
@@ -63,13 +66,10 @@ title: C_INFO
 
 # C_INFO Daedalus class
 
-<!-- Author -->
-???
-{: .author }
+* <!-- Author --> ???
+* <!-- Date --> ???
+{: .doc-info }
 <!-- Add styling and author and automatically add "Author:" as :before -->
-
-???
-{: .date }
 
 Heavily inspired by the amazing documentation site https://www.gothic-library.ru
 {: .acknowledgment } 
