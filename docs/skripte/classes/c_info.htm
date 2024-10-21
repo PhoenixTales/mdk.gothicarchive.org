@@ -23,34 +23,25 @@ title: C_INFO
 }
 </style>
 
-<HEAD>
-    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
-    <TITLE>Gothic-Documents: Gothic Scripts</TITLE>
-    <META NAME="AUTHOR" CONTENT="Auronen">
-    <link rel=stylesheet type="text/css" href="/style.css">
-</HEAD>
-    
-<section class="content">
 
-<table>
-<h1>C_INFO Daedalus class</h1>
+# C_INFO Daedalus class
 
-<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
-    <h3>Acknowledgment</h3>
-    <p>Heavily inspired by the amazing documentation site https://www.gothic-library.ru</p>
-</table>
+Heavily inspired by the amazing documentation site https://www.gothic-library.ru
+{: .acknowledgment } 
+<!-- Todo: Automatically add "Acknowledgement" title to a section like this and style accordingly, see GMC doc -->
 
-<p>The `C_INFO` class is used to define dialogues in the game.</p>
-
-<h2>Class definition</h2>
-
-<p>Class definition as it is defined in the <a href="https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164">Scripts/Content/_intern/Classes.d</a> script file.</p>
+The `C_INFO` class is used to define dialogues in the game.
 
 
-<details>
-  <summary>C_Info Daedalus class</summary>
+## Class definition
 
-<pre>c++
+Class definition as it is defined in the [Scripts/Content/_intern/Classes.d](https://github.com/PhoenixTales/gothic-devkit/blob/48193bef8fd37626f8909853bfc5ad4b7126f176/gothic/_work/data/Scripts/content/_Intern/CLASSES.D#L164) script file.
+
+
+### C_Info Daedalus class
+
+<!-- TODO: We somehow have to include some form of automatic syntax highlighting -->
+```c++ 
 CLASS C_Info
 {
     var int    npc;         // npc instance has the dialogue
@@ -62,13 +53,11 @@ CLASS C_Info
     var int    trade;       // should the dialogue show the trade window
     var int    permanent;   // should the dialogue be permanent or only one time deal
 };
-</pre>
+```
 
-</details>
+## Class members 
 
-<h2>Class members</h2>
-
-<pre>
+```
 | Variable                    | Type   | Description                                                                         |
 |-----------------------------|--------|-------------------------------------------------------------------------------------|
 | [npc](#npc)                 | int    | npc instance to have the dialogue                                                   |
@@ -79,72 +68,64 @@ CLASS C_Info
 | [description](#description) | string | text shown in the dialogue box                                                      |
 | [trade](#trade)             | int    | is it a trade dialogue                                                              |
 | [permanent](#permanent)     | int    | does the dialogue stay after being played once                                      |
-</pre>
+```
 
-<h2>Class member overview</h2>
+### Class member overview
 
-<p>Description of the class member variables.</p>
+Description of the class member variables.
 
-<h3>npc</h3>
+### npc
 
-<p>Sets what NPC will have this dialogue instance. Set a NPC instance.</p>
+Sets what NPC will have this dialogue instance. Set a NPC instance.
 
-<pre>c++
+```c++
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
 	npc	= PC_Thief; // NPC instance for Diego
     // ...
 };
-</pre>
+```
 
+### nr
 
-<h3>nr</h3>
+The `nr` member variables determines the order of shown dialogues. Dialogues are ordered in the ascending order - instances with higher `nr` are below instances with lower `nr`.
 
-<p>The `nr` member variables determines the order of shown dialogues. Dialogues are ordered in the ascending order - instances with higher `nr` are below instances with lower `nr`.</p>
-
-
-<pre>c++
+```c++
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
     // ...
     nr = 1;
     // ...
 };
-</pre>
+```
 
-<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
-    <h3>Note</h3>
-    <p>This is why the end dialogues usually have `nr = 999;` this is the highest number out of any dialogues therefore will always show up at the bottom. (999 is not the highest number the `nr` can store, it is just considered the highest number, as there will hardly be 998 dialogue instances for a single character)</p>
-</table>
-
-
-<h3>important</h3>
-
-<p>The `important` member variable determines, whether the NPC will automatically address the player or not.</p>
-
-<ul>
-    <li>- `important = TRUE` - the NPC will address the player
-    <li>- `important = FALSE` - the player has to talk to the NPC
-</ul>
-
-<p>When `important` is set to `TRUE` the description is not needed, since the dialogue is never shown in the dialogue box.</p>
-
-<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
-    <h3>Info</h3>
-    <p>If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).</p>
-</table>
-
-<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
-    <h3>Tip</h3>
-    <p>`important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.</p>
-</table>
+This is why the end dialogues usually have `nr = 999;` this is the highest number out of any dialogues therefore will always show up at the bottom. (999 is not the highest number the `nr` can store, it is just considered the highest number, as there will hardly be 998 dialogue instances for a single character).
+{: .note }
+<!-- Todo: Add this kind of extra "note" styling in a table, see original documents; add "Note" title automatically, if needed -->
 
 
-<h3>condition</h3>
+### important
 
-<p>Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it return `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Condition`.</p>
+The `important` member variable determines, whether the NPC will automatically address the player or not.
 
-<pre>
+* `important = TRUE` - the NPC will address the player
+* `important = FALSE` - the player has to talk to the NPC
+
+When `important` is set to `TRUE` the description is not needed, since the dialogue is never shown in the dialogue box.
+
+If there are multiple important dialogues that satisfy their condition function, they will be played in the order specified by [`nr`](#nr).
+{: .info }
+<!-- ToDO: Add styling and if needed automatically insert "info" title, see original docs -->
+	
+`important` variable is of the type integer, and it is initialized by the engine to the value of `0`. If you do not want your dialogue to be important, you can omit the `important` member variable since it will be initialized to `0` by the engine.
+{: .tip }
+<!-- Todo: Add styling and if needed automatically add "tip" title" -->
+
+
+### condition
+
+Condition function with signature `func int f()`. If the function returns `TRUE` the dialogue is displayed, if it return `FALSE` it is not displayed. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Condition`.
+
 === "Conditioned dialogue"
     ```c++
     INSTANCE Info_Diego_Gamestart (C_INFO)
@@ -163,6 +144,7 @@ INSTANCE Info_Diego_Gamestart (C_INFO)
         return FALSE; // Not needed, but added for readability
     };
     ```
+		
 === "Unconditioned dialogue"
     ```c++
     INSTANCE Info_Diego_EXIT_Gamestart(C_INFO)
@@ -177,16 +159,17 @@ INSTANCE Info_Diego_Gamestart (C_INFO)
         return TRUE; // or return 1;
     };
     ```
-!!! Tip
-    It is not necessary to return `FALSE` from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is `FALSE`.
-</pre>
+
+It is not necessary to return `FALSE` from dialogue conditions, but in other cases it can very rarely cause subtle bugs. It is thus good practice to always return some value, even if that is `FALSE`.
+{: .tip }
+<!-- Todo: Add styling and if needed automatically add "tip" title" -->
 
 
-<h3>information</h3>
+### information
 
-<p>The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Info`.</p>
+The `information` function contains the function name (without double quotes `""` as `func` is a type in Daedalus) that is called when the dialogue option is selected. It contains the lines NPC's will say, items that will be transferred, quests related logic and much more. The function name does not have to follow a particular naming convention, but a naming convention is used throughout all of the Gothic scripts: `{DialogueName}_Info`.
 
-<pre>c++
+```c++
 INSTANCE Info_Diego_Gamestart (C_INFO)
 {
     npc         = PC_Thief;
@@ -215,29 +198,29 @@ FUNC VOID Info_Diego_Gamestart_Info()
 
     B_Kapitelwechsel(1); // Show the chapter 1 screen
 };
-</pre>
+```
 
 
-<h3>description</h3>
+### description
 
-<p>Specify a string that will be shown in the dialogue window.</p>
+Specify a string that will be shown in the dialogue window.
 
-<pre>c++
+```c++
 instance DIA_XARDAS_GMC(C_INFO)
 {
     // ...
 	description = "Hello, is this the GMC site?";
 };
-</pre>
+```
 
-<img>![Description](../../../img/c_info_description.png)
+![Description](../../../img/c_info_description.png)
 
 
-<h3>trade</h3>
+### trade
 
-<p>If `trade` is set to `TRUE` the trading interface will be launched after the content `information` function is finished.</p>
+If `trade` is set to `TRUE` the trading interface will be launched after the content `information` function is finished.
 
-<pre>c++ title="Fisk's trade dialogue"
+```c++ title="Fisk's trade dialogue"
 instance  Stt_311_Fisk_Trade (C_INFO)
 {
     npc         = Stt_311_Fisk;
@@ -258,25 +241,26 @@ FUNC VOID  Stt_311_Fisk_Trade_Info()
 {
     AI_Output (other, self, "Stt_311_Fisk_Trade_15_00"); //Show me your goods.
 };
-</pre>
+```
 
-<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
-    <h3>Trivia</h3>
-    <p>Trade manager has been added to ZenGin not that long before the release of Gothic 1 (as discussed and discovered on [Phoenix the Game Discord server](https://discord.gg/CK4VAR7fpH) with the acquisition of Gothic version `0.94k`). In version 0.94 the trade manager worked quite differently and used a special (nowadays unused) Daedalus class `C_ItemReact`.</p>
-</table>
+Trade manager has been added to ZenGin not that long before the release of Gothic 1 (as discussed and discovered on [Phoenix the Game Discord server](https://discord.gg/CK4VAR7fpH) with the acquisition of Gothic version `0.94k`). In version 0.94 the trade manager worked quite differently and used a special (nowadays unused) Daedalus class `C_ItemReact`.
+{: .trivia }
+<!-- Add styling, and additional Trivia title automatically if needed -->
 
-<h3>permanent</h3>
+### permanent
 
-<p>Dialogues with `permanent = TRUE` do not disappear after the dialogue is played. This is used for dialogues where you ask for directions or flavor dialogues for unnamed NPCs.</p>
+Dialogues with `permanent = TRUE` do not disappear after the dialogue is played. This is used for dialogues where you ask for directions or flavor dialogues for unnamed NPCs.
 
-<table class="imptable" width=96% align=center cellpadding=8 cellspacing=0>
-    <h3>Bug</h3>
-    <p>Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.</p>
-</table>
+Frequently used external function `Npc_KnowsInfo` which returns true if the dialogue instance has been played has had a bug in the implementation for a long time. This bug made it impossible to use this function with dialogue instances with `permanent = TRUE` as it would always return `FALSE`. This has been fixed in `Union 1.0m`.
+{: .bug }
+<!-- add additional styling if and extra "bug" title inserted automatically if needed -->
 
-<h2>zParserExtender</h2>
+	    
+## zParserExtender
 
-<p>zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zPArserExtender/dialogues/)</p>
+zParserExtender implements some Quality of Life features for dialogues. More information can be found in [Dialogue constants article](../../../scripts/extenders/zPArserExtender/dialogues/)
 
-<h2>AF Script Packet</h2>
-<p>Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)</p>
+	    
+## AF Script Packet
+
+Enhaced Info Manager (implemented using Ikarus and LeGo) adds tun of customisation and additional features to dialogues. More information can be found in the [AFSP Enhanced Information Manager article](../../scripts/extenders/afsp/index.md)
