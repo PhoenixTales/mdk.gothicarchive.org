@@ -25,16 +25,19 @@ title: C_INFO
 .doc-info {
   font-weight: bold;
   display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 /* first child */
-.doc-info:first-child::before {
+.doc-info li:nth-child(1)::before {
   content: "Author:"
-  padding-left: 3px;
+  padding-right: 3px;
 }
 /* second child */
-.doc-info:second-child::before {
+.doc-info li:nth-child(2)::before {
   content: "Version:"
-  padding-left: 3px;
+  padding-right: 3px;
 }
 
 
