@@ -21,7 +21,7 @@ title: C_INFO
 }
 
 /* Author + Date/Version Section */
-	
+
 .doc-info {
   font-weight: bold;
   display: flex;
@@ -69,8 +69,8 @@ title: C_INFO
 
 # C_INFO Daedalus class
 
-* <!-- Author --> ???
-* <!-- Date --> ???
+* <!-- Author --> Auronen
+* <!-- Date --> 02.08.2022
 {: .doc-info }
 <!-- Add styling and author and automatically add "Author:" as :before -->
 
