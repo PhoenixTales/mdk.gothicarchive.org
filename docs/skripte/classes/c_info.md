@@ -80,10 +80,9 @@ title: C_INFO
 
 # C_INFO Daedalus class
 
-* <!-- Author --> Auronen
-* <!-- Date --> 02.08.2022
+* Auronen <!-- Author --> 
+* 02.08.2022 <!-- Date -->
 {: .doc-info }
-<!-- Add styling and author and automatically add "Author:" as :before -->
 
 Heavily inspired by the amazing documentation site https://www.gothic-library.ru
 {: .acknowledgment } 
