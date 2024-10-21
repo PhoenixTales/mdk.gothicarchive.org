@@ -454,8 +454,8 @@ footer {
 
   nav {
     height: initial;
+    /* Having this set overflow to "initial", makes it so the scroll position will be restored when the mobile navigation is opened again, otherwise it is reset each time the .main-nav is closed. (For some reason) */
     overflow: initial;
-    /* Having this set to "initial", makes it so the scroll position will be restored when the mobile navigation is opened again, otherwise it is reset each time the .main-nav is closed. (For some reason) */
     width: 100%;
   }
 
