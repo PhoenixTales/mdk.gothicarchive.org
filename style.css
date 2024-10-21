@@ -20,21 +20,19 @@
 html {
   background-color: #000;
   color: #7a7875;
-  font-size: 12px;
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-  line-height: 1.4;
   padding: 0;
   margin: 0;
 }
 
 body {
   display: flex;
-  flex-wrap: nowrap;
   padding: 0 4em;
   margin: 0;
   gap: 5em;
   align-items: stretch;
-  min-width: 0;
+  font-size: 12px;
+  line-height: 1.4;
 }
 
 h1 {
@@ -74,7 +72,7 @@ pre {
 
 ul {
   list-style: none;
-  padding-left: 1em;
+  padding-left: 12px;
 }
 
 /* Base - Links */
@@ -153,7 +151,7 @@ a:hover img {
 
 nav {
   width: 300px;
-  margin: 4em 0;
+  padding: 48px 12px;
   flex-shrink: 0;
 }
 
@@ -182,6 +180,7 @@ header {
 
 header img {
   max-width: 220px;
+  aspect-ratio: 325/257;
 }
 
 header h1 {
@@ -217,7 +216,7 @@ header a:hover {
 }
 
 .download {
-  margin-top: 4em;
+  margin-top: 48px;
   border: 1px solid #464646;
 }
 
@@ -411,8 +410,8 @@ footer {
 @media only screen and (max-width: 920px) {
   body {
     padding: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 0;
   }
 
