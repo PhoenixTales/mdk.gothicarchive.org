@@ -168,7 +168,7 @@ nav h2 {
   font-size: 0.8rem;
 }
 
-.menu-toggle-btn,
+.menu-bar,
 #menu-toggle {
   display: none;
 }
@@ -432,19 +432,19 @@ footer {
     overflow: auto;
     position: fixed;
 
-    /* Set these styles only when opening the nav, because otherwise, due to the backdrop-filter property, a stacking context will be formed, and with it the nav element will become the containing block of the elements like .menu-toggle-btn, and it won't act as a fixed element relative to the viewport anymore, but to the nav itself. */
+    /* Set these styles only when opening the nav, because otherwise, due to the backdrop-filter property, a stacking context will be formed, and with it the nav element will become the containing block of the elements like .menu-bar, and it won't act as a fixed element relative to the viewport anymore, but to the nav itself. */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.8);
   }
 
-  .menu-toggle-btn {
+  .menu-bar {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.8);
   }
 
-  .menu-toggle-btn {
+  .menu-bar {
     display: block;
     position: fixed;
     left: 0;
@@ -455,7 +455,7 @@ footer {
     padding: 8px 0;
   }
 
-  body:has(#menu-toggle:checked) .menu-toggle-btn {
+  body:has(#menu-toggle:checked) .menu-bar {
     position: sticky;
     top: 0;
     box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
@@ -486,7 +486,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 43px is the "intrinsic" height of the .menu-toggle-btn, so it should be changed in case the btn's height is changed */
+    /* 43px is the "intrinsic" height of the .menu-bar, so it should be changed in case the btn's height is changed */
     margin-top: 43px;
   }
 
