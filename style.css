@@ -227,21 +227,41 @@ header a:hover {
 }
 
 .download {
+  position: relative;
   margin-top: 48px;
   border: 1px solid #464646;
+  border-top: none;
+  font-size: 11px;
 }
 
-.download p {
-  text-align: center;
-  padding: 1em 0 1.4em;
+.download::before,
+.download::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  border-top: 1px solid #554b43;
+  width: calc(50% - 15ch);
+  background-color: #554b43;
+}
+
+.download::before {
+  left: 0;
+}
+
+.download::after {
+  right: 0;
+}
+
+.download h2 {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
   margin: 0;
+  line-height: 1;
+  font-size: inherit;
+  white-space: nowrap;
 }
-
-/*
-.download p:hover {
-  background: #191919;
-}
-*/
 
 .download a:link {
   text-decoration: none;
@@ -252,13 +272,11 @@ header a:hover {
   color: #9a5050;
 }
 
-.download h2 {
-  margin-bottom: 0;
-  margin-top: -0.8em;
-  margin-left: 1em;
-  padding: 0 1em;
-  background: #000;
-  display: inline-block;
+.download p {
+  text-align: center;
+  padding: 1.6em 2.1em;
+  font-size: 12px;
+  margin: 0;
 }
 
 /* .selected class is not used. */
@@ -430,7 +448,8 @@ footer {
 
   body:has(#menu-toggle:checked) {
     overflow: hidden;
-    padding-top: calc(245.962px + var(--header-padding-top)); /* Header height + header padding. */
+    padding-top: calc(245.962px + var(--header-padding-top));
+    /* Header height + header padding. */
   }
 
   nav {
