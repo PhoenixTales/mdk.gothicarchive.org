@@ -10,6 +10,7 @@ title: C_INFO
 
 .article h1 {
   color: #9a5050; /* red colour for the main heading */
+  background-color: #262422; /* header bg colour */
   text-align: center;
   border-bottom: 1px solid #808080;
   padding: 5px;
