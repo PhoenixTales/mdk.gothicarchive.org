@@ -7,7 +7,7 @@ title: C_INFO
 .article h1, .article h2, .article h3, .article h4, .article h5 {
   font-size: inherit;
 }
-	
+
 .article h1 {
   width: 100%;
   color: #9a5050; /* red colour for the main heading */
@@ -20,7 +20,8 @@ title: C_INFO
 .article h2 {
 }
 
-
+/* Author + Date/Version Section */
+	
 .author, .date {
   font-weight: bold;
 }
@@ -34,25 +35,28 @@ title: C_INFO
 }
 
 
+/* ARTICLE SECTION */
+	
 .article {
-    background-color: #0f0f0f;
-    padding: 7px;
-    border: 1px solid #808080;
-    margin-top: 20px;
+  background-color: #0f0f0f;
+  padding: 7px;
+  border: 1px solid #808080;
+  margin-top: 20px;
 }
 
 /* Needed for markdown styling in order to have seperate boxes divided into h2 sections */
 .article h2::before {
-    display: block;
-    height: 20px;
-    width: calc(100% + 16px);
-    background-color: black;
-    content: '';
-    position: relative;
-    left: -8px;
-    border: 1px solid #808080;
-    border-left: black;
-    border-right: black;
+  display: block;
+  height: 20px;
+  width: calc(100% + 16px);
+  background-color: black;
+  content: '';
+  position: relative;
+  left: -8px;
+  border: 1px solid #808080;
+  border-left: black;
+  border-right: black;
+  margin-bottom: 10px;
 }
 </style>
 
