@@ -3,6 +3,37 @@ title: C_INFO
 ---
 
 <style>
+
+.article h1, .article h2, .article h3, .article h4, .article h5 {
+  font-size: inherit;
+}
+	
+.article h1 {
+  width: 100%;
+  color: #9a5050; /* red colour for the main heading */
+  text-align: center;
+  border-bottom: 1px solid #808080;
+  padding: 5px;
+  margin: 0 -6px;
+}
+
+.article h2 {
+}
+
+
+.author, .date {
+  font-weight: bold;
+}
+.author:before {
+  content: "Author:"
+  padding-left: 3px;
+}
+.date:before {
+  content: "Version:"
+  padding-left: 3px;
+}
+
+
 .article {
     background-color: #0f0f0f;
     padding: 7px;
@@ -10,6 +41,7 @@ title: C_INFO
     margin-top: 20px;
 }
 
+/* Needed for markdown styling in order to have seperate boxes divided into h2 sections */
 .article h2::before {
     display: block;
     height: 20px;
@@ -31,6 +63,9 @@ title: C_INFO
 ???
 {: .author }
 <!-- Add styling and author and automatically add "Author:" as :before -->
+
+???
+{: .date }
 
 Heavily inspired by the amazing documentation site https://www.gothic-library.ru
 {: .acknowledgment } 
