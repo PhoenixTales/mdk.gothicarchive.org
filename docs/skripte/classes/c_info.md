@@ -23,6 +23,7 @@ title: C_INFO
 /* Author + Date/Version Section */
 
 .doc-info {
+  background-color: #262422; /* header bg colour */
   font-weight: bold;
   display: flex;
   justify-content: space-between;
