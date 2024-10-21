@@ -3,10 +3,11 @@ title: C_INFO
 ---
 
 <style>
-.content {
+.article {
     background-color: #0f0f0f;
     padding: 7px;
     border: 1px solid #808080;
+    margin-top: 20px;
 }
 
 .article h2::before {
