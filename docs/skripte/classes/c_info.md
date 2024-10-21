@@ -33,6 +33,12 @@ title: C_INFO
 }
 .doc-info li {
   padding: 0 7px;
+  display: flex;
+}
+/* needed for the seperating border */
+.doc-info li:nth-child(1) {
+  width: 50%;
+  border-right: 1px solid;
 }
 /* first child */
 .doc-info li:nth-child(1)::before {
