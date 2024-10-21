@@ -9,12 +9,11 @@ title: C_INFO
 }
 
 .article h1 {
-  width: 100%;
   color: #9a5050; /* red colour for the main heading */
   text-align: center;
   border-bottom: 1px solid #808080;
   padding: 5px;
-  margin: 0 -6px;
+  margin: -7px -6px;
 }
 
 .article h2 {
