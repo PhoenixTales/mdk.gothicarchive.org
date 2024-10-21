@@ -34,6 +34,7 @@ title: C_INFO
 .doc-info li {
   padding: 0 7px;
   display: flex;
+  flex-wrap: wrap; /* necessary for very narrow screens */
 }
 /* needed for the seperating border */
 .doc-info li:nth-child(1) {
