@@ -28,7 +28,11 @@ title: C_INFO
   display: flex;
   justify-content: space-between;
   padding: 0;
-  margin: 0;
+  margin: 7px -7px 0;
+  border-bottom: 1px solid #808080;
+}
+.doc-info li {
+  padding: 0 7px 0;
 }
 /* first child */
 .doc-info li:nth-child(1)::before {
