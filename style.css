@@ -26,6 +26,8 @@ html {
 }
 
 body {
+  --header-padding-top: 48px;
+
   display: flex;
   padding: 0 4em;
   margin: 0;
@@ -151,7 +153,6 @@ a:hover img {
 
 nav {
   width: 300px;
-  padding: 48px 12px;
   flex-shrink: 0;
 }
 
@@ -173,8 +174,8 @@ nav h2 {
 }
 
 header {
-  font-size: 16px;
-  /*margin: 0 auto;*/
+  font-size: 16px 12px;
+  padding-top: var(--header-padding-top);
   font-family: "IBM VGA 8x16", monospace;
 }
 
@@ -187,10 +188,11 @@ header h1 {
   font-weight: inherit;
   margin: 1em 1em 2em;
   border: 1px solid #464646;
-  padding: 0.5em;
+  padding: 8px;
   display: block;
   text-align: center;
   max-width: 200px;
+  font-size: 16px;
 }
 
 /*
@@ -213,6 +215,15 @@ header a:visited {
 
 header a:hover {
   color: #9a5050;
+}
+
+.menu-index {
+  padding: 0 12px 48px;
+}
+
+.base-links {
+  padding: 0;
+  margin: 0;
 }
 
 .download {
@@ -409,6 +420,8 @@ footer {
 
 @media only screen and (max-width: 920px) {
   body {
+    --header-padding-top: 96px;
+
     padding: 0;
     flex-direction: column;
     align-items: center;
@@ -417,6 +430,7 @@ footer {
 
   body:has(#menu-toggle:checked) {
     overflow: hidden;
+    padding-top: calc(245.962px + var(--header-padding-top)); /* Header height + header padding. */
   }
 
   nav {
@@ -424,22 +438,16 @@ footer {
     overflow: initial;
     /* Having this set to "initial", makes it so the scroll position will be restored when the mobile navigation is opened again, otherwise it is reset each time the .main-nav is closed. (For some reason) */
     width: 100%;
-    margin: 0;
   }
 
   body:has(#menu-toggle:checked) nav {
+    top: 0;
+    left: 0;
     height: 100dvh;
     overflow: auto;
     position: fixed;
 
     /* Set these styles only when opening the nav, because otherwise, due to the backdrop-filter property, a stacking context will be formed, and with it the nav element will become the containing block of the elements like .menu-bar, and it won't act as a fixed element relative to the viewport anymore, but to the nav itself. */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.8);
-  }
-
-  body:has(#menu-toggle:checked) nav,
-  .menu-bar {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.8);
@@ -453,21 +461,25 @@ footer {
     width: 100%;
     z-index: 10;
     line-height: 1;
-    padding: 8px 0;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.8);
   }
 
   body:has(#menu-toggle:checked) .menu-bar {
     position: sticky;
     top: 0;
     box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
+    margin-bottom: 18px;
   }
 
   label[for="menu-toggle"] {
     display: flex;
     gap: 5px;
-    align-items: center;
+    align-items: baseline;
+    padding: 12px 18px;
     text-transform: uppercase;
-    padding-left: 1em;
     color: #a1a582;
     font-size: 18px;
     /*border: 1px solid;*/
@@ -484,20 +496,15 @@ footer {
     font-size: 150%;
   }
 
-  .menu-title {
-    padding-top: 2px;
-  }
-
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 43px is the "intrinsic" height of the .menu-bar, so it should be changed in case the btn's height is changed */
-    margin-top: 43px;
   }
 
   body:has(#menu-toggle:checked) header {
-    margin-top: 0;
+    display: none;
   }
 
   header h1 {
@@ -510,11 +517,6 @@ footer {
 
   body:has(#menu-toggle:checked) .menu-index {
     display: block;
-  }
-
-  .download {
-    margin-left: 1em;
-    margin-right: 1em;
   }
 
   main {
