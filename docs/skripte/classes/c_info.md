@@ -32,7 +32,7 @@ title: C_INFO
   border-bottom: 1px solid #808080;
 }
 .doc-info li {
-  padding: 0 7px;
+  padding: 3px 7px;
   display: flex;
   flex-wrap: wrap; /* necessary for very narrow screens */
 }
