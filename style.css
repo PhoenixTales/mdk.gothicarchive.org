@@ -121,30 +121,14 @@ a:hover img {
 
 /* Base - Scrollbar */
 
-@supports not selector(::-webkit-scrollbar) {
-
-  nav,
-  html {
-    scrollbar-color: #424242 #101010;
-  }
+nav,
+html {
+  scrollbar-color: #424242 #101010;
 }
 
 nav::-webkit-scrollbar,
 html::-webkit-scrollbar {
   width: 10px;
-}
-
-nav::-webkit-scrollbar-track,
-html::-webkit-scrollbar-track {
-  background-color: rgb(38, 36, 34);
-  /* border-left: 4px solid rgb(0, 0, 0);
-  border-right: 4px solid rgb(0, 0, 0); */
-}
-
-nav::-webkit-scrollbar-thumb,
-html::-webkit-scrollbar-thumb {
-  background: rgb(0, 0, 0);
-  /* border: 1px solid #bdbdbd; */
 }
 
 
