@@ -1,7 +1,7 @@
 # About this website and how to contribute
 
 * Flosha
-* 21.10.2024
+* 21.10.2024  
 {: .author-date }
 
 
