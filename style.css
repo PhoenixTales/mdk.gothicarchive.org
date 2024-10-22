@@ -528,17 +528,42 @@ footer {
   }
 
   .menu-bar {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
     z-index: 10;
     line-height: 1;
+    padding: 3px;
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background: rgba(0, 0, 0, 0.8);
+    background: rgb(25, 25, 25, 0.8); /*background: rgba(0, 0, 0, 0.8);*/
+    border-bottom: 1px solid #464646;
+  }
+
+  .menu-btn {
+    background: rgb(25, 25, 25); 
+    border-top: 1px solid #464646;
+    border-left: 1px solid #464646;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .systray {
+    background: rgb(25, 25, 25); 
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid #464646;
+    border-bottom: 1px solid #464646;
+    display: flex;
+    gap: 3px;
+  }
+  .systray img {
+    max-width: 10px;
+    max-height: 10px;
   }
 
   body:has(#menu-toggle:checked) .menu-bar {
