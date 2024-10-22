@@ -35,6 +35,7 @@ body {
   align-items: stretch;
   font-size: 12px;
   line-height: 1.4;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
@@ -154,6 +155,10 @@ a:hover img {
 nav {
   width: 300px;
   flex-shrink: 0;
+  height: 100dvh;
+  position: sticky;
+  top: 0;
+  overflow: auto;
 }
 
 nav ul li {
@@ -448,11 +453,12 @@ footer {
 
   body:has(#menu-toggle:checked) {
     overflow: hidden;
-    padding-top: calc(245.962px + var(--header-padding-top));
     /* Header height + header padding. */
+    padding-top: calc(245.962px + var(--header-padding-top));
   }
 
   nav {
+    position: initial;
     height: initial;
     /* Having this set overflow to "initial", makes it so the scroll position will be restored when the mobile navigation is opened again, otherwise it is reset each time the .main-nav is closed. (For some reason) */
     overflow: initial;
