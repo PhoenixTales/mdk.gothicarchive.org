@@ -558,6 +558,8 @@ footer {
     border-left: 1px solid black;
     border-right: 1px solid #464646;
     border-bottom: 1px solid #464646;
+  }
+  .systray ul {
     display: flex;
     gap: 3px;
   }
