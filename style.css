@@ -129,6 +129,7 @@ a:hover img {
   }
 }
 
+/*
 nav::-webkit-scrollbar,
 html::-webkit-scrollbar {
   width: 9px;
@@ -146,6 +147,7 @@ html::-webkit-scrollbar-thumb {
   background: rgb(0, 0, 0);
   border: 1px solid #bdbdbd
 }
+*/
 
 /* Nav */
 
@@ -541,7 +543,7 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: rgb(25, 25, 25, 0.8); /*background: rgba(0, 0, 0, 0.8);*/
-    border-bottom: 1px solid #464646;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.9);
   }
 
   .menu-btn {
@@ -561,11 +563,13 @@ footer {
   }
   .systray ul {
     display: flex;
-    gap: 3px;
+    gap: 12px;
+    padding: 8px;
+    margin: 0;
   }
   .systray img {
-    max-width: 10px;
-    max-height: 10px;
+    max-width: 16px;
+    max-height: 16px;
   }
 
   body:has(#menu-toggle:checked) .menu-bar {
@@ -577,10 +581,9 @@ footer {
 
   label[for="menu-toggle"] {
     display: flex;
-    gap: 5px;
+    gap: 10px;
     align-items: baseline;
-    padding: 12px 18px;
-    text-transform: uppercase;
+    padding: 2px 20px;
     color: #a1a582;
     font-size: 18px;
     /*border: 1px solid;*/
