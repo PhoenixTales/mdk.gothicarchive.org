@@ -129,25 +129,24 @@ a:hover img {
   }
 }
 
-/*
 nav::-webkit-scrollbar,
 html::-webkit-scrollbar {
-  width: 9px;
+  width: 10px;
 }
 
 nav::-webkit-scrollbar-track,
 html::-webkit-scrollbar-track {
   background-color: rgb(38, 36, 34);
-  border-left: 4px solid rgb(0, 0, 0);
-  border-right: 4px solid rgb(0, 0, 0);
+  /* border-left: 4px solid rgb(0, 0, 0);
+  border-right: 4px solid rgb(0, 0, 0); */
 }
 
 nav::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb {
   background: rgb(0, 0, 0);
-  border: 1px solid #bdbdbd
+  /* border: 1px solid #bdbdbd; */
 }
-*/
+
 
 /* Nav */
 
