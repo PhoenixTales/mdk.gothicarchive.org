@@ -24,16 +24,16 @@ The entire Gothic Modding Community exists primarily thanks to them and Nico Ben
 The only reasoning I can come up with for why that is, may be the focus of a majority of todays modding community on the (so-called) "Gothic 2" and its Modkit, which does not contain said documentation. They may ignore it because they simply don't care for the actual, original Gothic. 
 
 So what I wanted to do instead with this website, is...
-* ... to give justice to the original documentation of the Mad Scientists by translating theit entire documentation into English and taking it as the foundation upon which to build our own, developing it further, not replacing it.
+* ... to give justice to the original documentation of the Mad Scientists by translating it into English in its entirety and taking it as the foundation upon which to build our own, developing it further, not replacing it.
 * ... to give justice also to their simple html documentation design, in that I preserve the original design, only transferring it into a kind of dark-mode styling in accordance with Gothic, our Archive and our other websites.
-* ... to link the documentation directly with our update of the Mod Development Kit (MDK) itself, that we curate since 2019, which contains the necessary scripts and assets to modify, as well as with all the relevant tools created by the community; this is the reason that our Menu is split into these three sections: /GDATA (Gothic files), /Documentation and /tools.
+* ... to link the documentation directly with our update of the Mod Development Kit (MDK) itself, that we curate since 2019, which contains the necessary scripts and assets to modify, as well as with all the relevant tools created by the community; this is the reason that our Menu is split into three sections: /GDATA (Gothic files), /Documentation and /tools.
 * ... to serve thereby not only as an international modding documentation that is easy to contribute via Markdown, but also as an international ZenGin Modding Hub.
 * ... obviously, just as the Gothic Archive and the entire Phoenix project, it is limited to the original GOTHIC.  
 
 
 ## How to contribute
 
-Contribution is very simply.
+Contribution is very simple.
 
 Ideally (but optionally) you may get a local copy of the website. For this you install git, open the git console at the directory of your choice and type:
 
