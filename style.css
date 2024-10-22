@@ -393,9 +393,6 @@ main {
   scrollbar-color: #424242 #101010;
 }
 
-.icon-box ul {
-}
-
 .icon-box li {
   max-width: 75px;
   max-height: 75px;
@@ -420,6 +417,10 @@ main {
   font-size: 12px;
   text-align: center;
   margin-top: 5px;
+}
+
+.icon-box a {
+  color: inherit;
 }
 
 
