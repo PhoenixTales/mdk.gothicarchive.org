@@ -56,7 +56,7 @@ git commit -m "Your Message: My new document"
 
 Then ``git push``. Take care to perform ``git pull`` beforehand in order to avoid any conflicts with changes that others have made. 
 
-If this seems to complicated to you, don't worry. You also can contribute something via GitHub`s webinterface. Just write a markdown document on your computer in any random text editor of your choice, then create a new file in the web interface (click on the ``+``, then choose ``add file``). Safe it with the extension ``.md``.  
+If this seems to complicated to you, don't worry. You also can contribute something via GitHub's webinterface. Just write a markdown document on your computer in any random text editor of your choice, then create a new file in the web interface (click on the ``+``, then choose ``add file``). Safe it with the extension ``.md``.  
 
 
 ### How to write a document in Markdown
