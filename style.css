@@ -577,10 +577,11 @@ footer {
 
   .systray {
     background: rgb(25, 25, 25); 
-    border-top: 2px solid black;
+    /*border-top: 2px solid black;
     border-left: 2px solid black;
     border-right: 2px solid #464646;
-    border-bottom: 2px solid #464646;
+    border-bottom: 2px solid #464646;*/
+    border: 2px inset #464646;
   }
   .systray ul {
     display: flex;
