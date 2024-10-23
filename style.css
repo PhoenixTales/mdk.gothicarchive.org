@@ -370,11 +370,8 @@ main {
   justify-content: space-between;
   max-height: 400px;
   overflow: auto;
-  border-top: 2px solid #464646;
-  border-left: 2px solid #464646;
-  border-right: 2px solid inherit;
-  border-bottom: 2px solid inherit;
-  margin-bottom: 25px;
+  border: 1px solid #464646;
+  margin-bottom: 30px;
   padding: 15px;
   background: #101010;
   scrollbar-color: #424242 #101010;
