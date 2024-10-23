@@ -370,7 +370,8 @@ main {
   justify-content: space-between;
   max-height: 400px;
   overflow: auto;
-  border: 1px solid #464646;
+ /* border: 1px solid #464646; */
+  border-style: inset; 
   margin-bottom: 25px;
   padding: 15px;
   background: #101010;
@@ -587,6 +588,7 @@ footer {
     gap: 12px;
     padding: 8px;
     margin: 0;
+    font-family: "IBM VGA 8x16";
   }
   .systray img {
     max-width: 16px;
