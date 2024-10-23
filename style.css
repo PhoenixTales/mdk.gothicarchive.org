@@ -179,7 +179,7 @@ header img {
 header h1 {
   font-weight: inherit;
   margin: 1em 1em 2em;
-  border: 1px solid #464646;
+  border: 2px inset #464646;
   padding: 8px 12px;
   display: block;
   text-align: center;
