@@ -11,6 +11,11 @@
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "Gothic_alpha_font";
+  src: url("gothic-alpha-font.ttf") format("truetype");
+}
+
 *,
 ::before,
 ::after {
@@ -178,6 +183,7 @@ header img {
 
 header h1 {
   font-weight: inherit;
+  font-family: "Gothic_alpha_font";
   margin: 1em 1em 2em;
   border: 2px inset #464646;
   padding: 8px 12px;
