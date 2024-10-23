@@ -60,6 +60,7 @@ h4 {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 pre {
@@ -278,7 +279,6 @@ header a:hover {
 
 .phoenix-ascii {
   max-width: 100px;
-  display: block;
   margin: 4em auto;
 }
 
@@ -365,27 +365,31 @@ main {
 
 .icon-box {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 100%;
-  /*justify-content: space-between;*/
+  gap: 70px;
+  align-items: start;
+  justify-content: space-between;
   max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   border: 1px solid #464646;
   margin-bottom: 25px;
+  padding: 15px;
   background: #101010;
   scrollbar-color: #424242 #101010;
 }
 
-.icon-box li {
-  max-width: 75px;
-  max-height: 75px;
+.icon-box ul {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 80px);
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
+
 .icon-box figure {
-  margin: 0 0 20px;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .icon-box img {
@@ -393,15 +397,17 @@ main {
   height: 42px;
   border: none;
   margin: 0 auto;
-  display: block;
 }
 
 .icon-box figcaption {
   max-width: 100%;
+  height: 34px;
   font-family: monospace;
   font-size: 12px;
   text-align: center;
   margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .icon-box a {
@@ -505,6 +511,7 @@ footer {
     height: 100dvh;
     overflow: auto;
     position: fixed;
+    z-index: 10;
 
     /* Set these styles only when opening the nav, because otherwise, due to the backdrop-filter property, a stacking context will be formed, and with it the nav element will become the containing block of the elements like .menu-bar, and it won't act as a fixed element relative to the viewport anymore, but to the nav itself. */
     backdrop-filter: blur(10px);
@@ -530,11 +537,37 @@ footer {
   }
 
   .menu-btn {
+    display: flex;
+    align-items: center;
     background: rgb(25, 25, 25); 
     border-top: 2px solid #464646;
     border-left: 2px solid #464646;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+  }
+
+  body:has(#menu-toggle:checked) .menu-bar {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
+    margin-bottom: 18px;
+  }
+
+  label[for="menu-toggle"] {
+    padding: 2px 20px;
+    color: #a1a582;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  label[for="menu-toggle"]::selection {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .menu-icon {
+    width: 55px;
   }
 
   .systray {
@@ -553,34 +586,6 @@ footer {
   .systray img {
     max-width: 16px;
     max-height: 16px;
-  }
-
-  body:has(#menu-toggle:checked) .menu-bar {
-    position: sticky;
-    top: 0;
-    box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
-    margin-bottom: 18px;
-  }
-
-  label[for="menu-toggle"] {
-    display: flex;
-    gap: 10px;
-    align-items: baseline;
-    padding: 2px 20px;
-    color: #a1a582;
-    font-size: 18px;
-    /*border: 1px solid;*/
-    user-select: none;
-    cursor: pointer;
-  }
-
-  label[for="menu-toggle"]::selection {
-    background-color: transparent;
-    color: inherit;
-  }
-
-  .menu-icon {
-    font-size: 150%;
   }
 
   body:has(#menu-toggle:checked) header {
