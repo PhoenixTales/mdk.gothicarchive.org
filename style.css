@@ -60,6 +60,7 @@ h4 {
 
 img {
   max-width: 100%;
+  display: block;
 }
 
 pre {
@@ -278,7 +279,6 @@ header a:hover {
 
 .phoenix-ascii {
   max-width: 100px;
-  display: block;
   margin: 4em auto;
 }
 
@@ -397,7 +397,6 @@ main {
   height: 42px;
   border: none;
   margin: 0 auto;
-  display: block;
 }
 
 .icon-box figcaption {
@@ -538,11 +537,37 @@ footer {
   }
 
   .menu-btn {
+    display: flex;
+    align-items: center;
     background: rgb(25, 25, 25); 
     border-top: 2px solid #464646;
     border-left: 2px solid #464646;
     border-right: 2px solid black;
     border-bottom: 2px solid black;
+  }
+
+  body:has(#menu-toggle:checked) .menu-bar {
+    position: sticky;
+    top: 0;
+    box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
+    margin-bottom: 18px;
+  }
+
+  label[for="menu-toggle"] {
+    padding: 2px 20px;
+    color: #a1a582;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  label[for="menu-toggle"]::selection {
+    background-color: transparent;
+    color: inherit;
+  }
+
+  .menu-icon {
+    width: 55px;
   }
 
   .systray {
@@ -561,34 +586,6 @@ footer {
   .systray img {
     max-width: 16px;
     max-height: 16px;
-  }
-
-  body:has(#menu-toggle:checked) .menu-bar {
-    position: sticky;
-    top: 0;
-    box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
-    margin-bottom: 18px;
-  }
-
-  label[for="menu-toggle"] {
-    display: flex;
-    gap: 10px;
-    align-items: baseline;
-    padding: 2px 20px;
-    color: #a1a582;
-    font-size: 18px;
-    /*border: 1px solid;*/
-    user-select: none;
-    cursor: pointer;
-  }
-
-  label[for="menu-toggle"]::selection {
-    background-color: transparent;
-    color: inherit;
-  }
-
-  .menu-icon {
-    font-size: 150%;
   }
 
   body:has(#menu-toggle:checked) header {
