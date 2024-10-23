@@ -505,6 +505,7 @@ footer {
     height: 100dvh;
     overflow: auto;
     position: fixed;
+    z-index: 10;
 
     /* Set these styles only when opening the nav, because otherwise, due to the backdrop-filter property, a stacking context will be formed, and with it the nav element will become the containing block of the elements like .menu-bar, and it won't act as a fixed element relative to the viewport anymore, but to the nav itself. */
     backdrop-filter: blur(10px);
