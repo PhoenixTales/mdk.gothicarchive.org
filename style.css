@@ -365,27 +365,31 @@ main {
 
 .icon-box {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  max-width: 100%;
-  /*justify-content: space-between;*/
+  gap: 70px;
+  align-items: start;
+  justify-content: space-between;
   max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: auto;
   border: 1px solid #464646;
   margin-bottom: 25px;
+  padding: 15px;
   background: #101010;
   scrollbar-color: #424242 #101010;
 }
 
-.icon-box li {
-  max-width: 75px;
-  max-height: 75px;
+.icon-box ul {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 80px);
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
+
 .icon-box figure {
-  margin: 0 0 20px;
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 
 .icon-box img {
@@ -398,10 +402,13 @@ main {
 
 .icon-box figcaption {
   max-width: 100%;
+  height: 34px;
   font-family: monospace;
   font-size: 12px;
   text-align: center;
   margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .icon-box a {
