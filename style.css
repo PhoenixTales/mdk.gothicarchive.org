@@ -386,6 +386,10 @@ main {
   margin: 0;
 }
 
+.icon-box ul:last-child li:last-child {
+  grid-column-start: 2;
+}
+
 .icon-box figure {
   width: 100%;
   height: 100%;
