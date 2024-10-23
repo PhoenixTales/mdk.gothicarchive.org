@@ -541,8 +541,6 @@ footer {
   }
 
   .menu-btn {
-    display: flex;
-    align-items: center;
     background: rgb(25, 25, 25); 
     border-top: 2px solid #464646;
     border-left: 2px solid #464646;
@@ -558,6 +556,9 @@ footer {
   }
 
   label[for="menu-toggle"] {
+    display: flex;
+    height: 100%;
+    align-items: center;
     padding: 2px 20px;
     color: #a1a582;
     font-size: 18px;
