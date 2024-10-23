@@ -590,7 +590,10 @@ footer {
     gap: 12px;
     padding: 8px;
     margin: 0;
+  }
+  .systray li {
     font-family: "IBM VGA 8x16";
+    font-size: 16px;
   }
   .systray img {
     max-width: 16px;
