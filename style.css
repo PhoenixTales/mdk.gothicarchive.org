@@ -366,7 +366,7 @@ main {
   background: #101010;
   scrollbar-color: #424242 #101010;
   margin-bottom: 30px;
-  max-height: 400px;
+  max-height: 420px;
 }
 
 .icon-box > ul {
@@ -385,7 +385,9 @@ main {
 }
   
 .icon-box > ul li {
-  padding: 10px 20px;
+  margin: 10px 30px;
+  padding: 5px;
+  border: 2px outset;
   width: calc(var(--box-width) / 2);
   font-size: 11px;
 }
