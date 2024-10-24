@@ -11,6 +11,11 @@
   font-size: 16px;
 }
 
+@font-face {
+  font-family: "Gothic_alpha_font";
+  src: url("/_img/fonts/gothic-alpha-font.ttf") format("truetype");
+}
+
 *,
 ::before,
 ::after {
@@ -171,6 +176,17 @@ header {
   align-items: center;
 }
 
+header a:link {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header a:visited {
+  text-decoration: none;
+}
+
 header img {
   max-width: 220px;
   aspect-ratio: 325/257;
@@ -178,34 +194,13 @@ header img {
 
 header h1 {
   font-weight: inherit;
+  font-family: "Gothic_alpha_font";
   margin: 1em 1em 2em;
-  border: 1px solid #464646;
+  border: 2px inset #464646;
   padding: 8px 12px;
-  display: block;
   text-align: center;
   max-width: 200px;
   font-size: 16px;
-}
-
-/*
-header a:link h1:hover {
-  color: #b6b2a3;
-}
-
-header a:visited {
-  color: #b6b2a3;
-}
-*/
-
-header a:link {
-  text-decoration: none;
-}
-
-header a:visited {
-  text-decoration: none;
-}
-
-header a:hover {
   color: #9a5050;
 }
 
@@ -371,7 +366,7 @@ main {
   max-height: 400px;
   overflow: auto;
   border: 1px solid #464646;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   padding: 15px;
   background: #101010;
   scrollbar-color: #424242 #101010;
@@ -537,15 +532,6 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: rgb(25, 25, 25, 0.8); /*background: rgba(0, 0, 0, 0.8);*/
-    border-bottom: 2px solid rgb(0, 0, 0, 0.9);
-  }
-
-  .menu-btn {
-    background: rgb(25, 25, 25); 
-    border-top: 2px solid #464646;
-    border-left: 2px solid #464646;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
   }
 
   body:has(#menu-toggle:checked) .menu-bar {
@@ -553,6 +539,15 @@ footer {
     top: 0;
     box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
     margin-bottom: 18px;
+  }
+
+  .menu-btn {
+    background: rgb(25, 25, 25); 
+    border: 2px outset #464646;
+  }
+
+  body:has(#menu-toggle:checked) .menu-btn {
+    border-style: inset;
   }
 
   label[for="menu-toggle"] {
@@ -577,16 +572,21 @@ footer {
 
   .systray {
     background: rgb(25, 25, 25); 
-    border-top: 2px solid black;
+    /*border-top: 2px solid black;
     border-left: 2px solid black;
     border-right: 2px solid #464646;
-    border-bottom: 2px solid #464646;
+    border-bottom: 2px solid #464646;*/
+    border: 2px inset #464646;
   }
   .systray ul {
     display: flex;
     gap: 12px;
     padding: 8px;
     margin: 0;
+  }
+  .systray li {
+    font-family: "IBM VGA 8x16";
+    font-size: 16px;
   }
   .systray img {
     max-width: 16px;
