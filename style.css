@@ -454,7 +454,6 @@ main {
 .icon-box {
   align-items: start;
   overflow-x: auto;
-  overflow-y: hidden;
   border: 1px solid #464646;
   background: #101010;
   scrollbar-color: #424242 #101010;
@@ -482,6 +481,7 @@ main {
 
 .icon-box > span:last-of-type {
   grid-area: headerRight;
+  text-align: right;
 }
 
 .icon-box ul {
@@ -503,6 +503,7 @@ main {
 .icon-box ul:last-of-type {
   grid-area: rightList;
   margin-left: 15px;
+  direction: rtl;
 }
 
 .icon-box figure {
