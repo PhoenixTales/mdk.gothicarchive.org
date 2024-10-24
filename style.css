@@ -41,6 +41,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/*
 h1 {
   font-size: inherit;
 }
@@ -48,11 +49,12 @@ h1 {
 h2 {
   font-size: 12px;
   font-weight: normal;
-}
+}*/
 
-/*
+
 h1{font-family:verdana,helvetica;font-size:16pt;}
-h2{font-family:verdana,helvetica;font-size:14pt;}*/
+h2{font-family:verdana,helvetica;font-size:14pt;}
+
 h3 {
   font-family: serif;
   font-size: 12pt;
@@ -77,10 +79,6 @@ pre {
   background: #2d3a34;
 }
 
-ul {
-  list-style: none;
-  padding-left: 12px;
-}
 
 /* Base - Links */
 
@@ -147,6 +145,11 @@ nav {
   position: sticky;
   top: 0;
   overflow: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 12px;
 }
 
 nav ul li {
@@ -558,6 +561,7 @@ main {
   font-family: verdana, helvetica;
   font-size: 8pt;
   text-align: center;
+  margin-top: 20px;
 }
 
 footer {
