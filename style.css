@@ -359,7 +359,7 @@ main {
 } */
 
 .icon-box {
-  --box-width: 484px;
+  --box-width: 480px;
 
   overflow: auto;
   border: 1px solid #464646;
@@ -397,6 +397,7 @@ main {
 
 .icons {
   display: grid;
+  align-items: start;
   grid-template-columns: repeat(2, calc(var(--box-width) / 2));
 }
 
