@@ -374,13 +374,15 @@ main {
 
 .icon-box:first-child {
   position: sticky;
+  display: block;
+  width: 100%;
   top: 0;
   font-size: 12px;
   text-transform: uppercase;
   border: 1px solid;
 }
 
-.icon-box li:first-child {
+.icon-box:first-child li:first-child {
   border-right: 1px solid;
 }
 
