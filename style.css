@@ -372,7 +372,7 @@ main {
   scrollbar-color: #424242 #101010;
 }
 
-.icon-box:first-child {
+.icon-box ul:first-child {
   position: sticky;
   display: block;
   width: 100%;
@@ -382,7 +382,7 @@ main {
   border: 1px solid;
 }
 
-.icon-box:first-child li:first-child {
+.icon-box ul:first-child li:first-child {
   border-right: 1px solid;
 }
 
