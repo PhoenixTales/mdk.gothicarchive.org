@@ -1,12 +1,10 @@
-<HTML>
-<HEAD>
-    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
-    <TITLE>Gothic-Documents: Der Spacer</TITLE>
-    <META NAME="AUTHOR" CONTENT="Bert Speckels">
-    <link rel=stylesheet type="text/css" href="../style.css">
-</HEAD>
-<BODY bgcolor="#ffffff" text="#000000" link="000099" vlink="000099" >
+---
+title: Spacer Introduction
+---
 
+<HTML>
+
+    <section class="content">
 <!---
  Kopfzeile
  --->
@@ -15,7 +13,7 @@
 <tr>
         <td width=50% align=left>
                 <font color="#000000"><b>
-                Dokumentation
+                Documentation
                 </b></font>
         </td>
         <td width=50% align=right>
@@ -28,17 +26,17 @@
 <tr>
         <td colspan=2 align=center>
                 <font color="#660000"><b>
-                Der Spacer
+                Spacer Introduction
                 </b></font>
         </td>
 </tr>
 <!--- Name des Autors und Datum der letzten Aktualisierung --->
 <tr>
         <td width=50% align=left><b>
-                Autor: Bert Speckels
+                Author: Bert Speckels
         </b></td>
         <td width=50% align=right><b>
-                Version: 12.August 2001
+                Version: August 12th 2001
         </b></td>
 </tr>
 </table>
@@ -55,88 +53,76 @@
 <font size=2 face="Verdana,Arial, Helv, Helvetica, SanSerif">
 
 <a name="1">
-<H1>Was kann der Spacer?</H1>
+<H1>What can the Spacer do?</H1>
 </a>
 
-Es ist einfacher zu beschreiben, was der Spacer nicht kann. Deshalb fange ich damit einmal an:
+It is easier to describe, what the Spacer cannot do. Therefore I will start with this:
 <br><br>
-Der Spacer kann also nicht:
+The Space cannot:
 <ul>
-<li>Eine 3D-Welt erstellen<br>
-    Dazu ist ein Programm zur Erstellung von 3D-Meshes nötig. Allen voran 3D-Studio Max.
-<li>Die Welt mit Menschen und Monstern (NPCs) beleben<br>
-    Das übernehmen komplett die Scripte. Der Spacer kann die Welt nur für lebende Wesen vorbereiten, beispielsweise ein Wegnetz verlegen.
-<li>Die Story gestalten<br>
-    Auch das wird vollständig von den Scripten erledigt, und auch hier bereitet der Spacer nur vor: Events in die Welt einfügen, Gegenstände verteilen etc....
+<li>Create a 3D World<br>
+    For this a program for the creation of 3D meshes is necessary, such as 3D-Studio Max [today, Blender is the recommended 3D modeling program of choice for Gothic Modding -Flosha]. 
+<li>Enliven the world with humans and monsters (NPCs)<br>
+    This is completely handled by the scripts. The Spacer can only <em>prepare</em> the world for living beings, for instance by placing a waynet.
+<li>Design the Story<br>
+    This too is completely handled by the scripts, and here too the Spacer can only prepare: Include Events into the world, distribute objects etc...
 </ul>
-Eines ist also klar: Der Spacer ist nur ein Tool von vielen, das bei der
-Entwicklung von Gothic zur Verfügung stand. Ganz vereinfacht betrachtet
-sieht die Entwicklung eines Spiels wie Gothic wie folgt aus:
+Thus, one thing is clear: The Spacer is only one tool of many, that was available used in the development of Gothic. To look at it in a very simplified way, the development of a game like Gothic can be imagined as follows:
 
 <ol>
-<li><b>Die 3D-Welten und Gegenstände, Wesen etc. mit 3D-Studio erstellen und
-    dabei zahlreiche Vorgaben beachten</b><br>
-    Solche Vorgaben sind z.b.
+<li><b>Creating the 3D worlds and objects, creatures etc. with a 3D programme and
+    respecting numerous requirements while doing so</b><br>
+    Such requirements are, for example
     <ul>
-    <li>Welche Höhe können (N)PCs erklettern?
-    <li>Welche Schrägen können der (N)PCs noch begehen?
-    <li>Welche "Gräben" können der (N)PCs überspringen?
-    <li>Wie gross darf ein maximales Polygon sein?
-    <li>Wo liegt die vertretbare Obergrenze für die Polygonanzahl?
-    <li>und vieles andere ...
+    <li>Which height (N)PCs can climb?
+    <li>Which Slopes (N)PCs can still walk upon?
+    <li>Which "clefts" (N)PCs can jump over?
+    <li>How big is a polygon maximally allowed to be?
+    <li>Where lies the justifiable upper limit for the amount of polygons?
+    <li>and many others ...
     </ul>
-    Neben Leveln werden auch alle anderen 3D-Objekte mit 3D-Studio erstellt:
+    Aside from levels all  kinds of other 3D objects are also created with the 3D programme:
     <ul>
-    <li>Bäume und Sträucher
-    <li>Zäune, Steine, Feuerstellen
-    <li>Items und MOBs (Winden etc.)
-    <li>vieles mehr ...
+    <li>Trees and bushes
+    <li>Fences, Stones, fireplaces
+    <li>Items and MOBs (winches etc.)
+    <li>many more ...
     </ul>
-<li><b>Weitere benötigte Daten erstellen</b><br>
+<li><b>Creating additional necessary data</b><br>
     <ul>
-    <li>Texturen
-    <li>Item-Instanzen (werden in den Scripten erzeugt)
+    <li>Textures
+    <li>Item-Instances (are generated in the Scripts)
     </ul>
-<li><b>Die erstellte 3D-Welt als 3DS-Datei in den Spacer laden und mit den
-    anderen erstellten Gegenständen und Texturen beleben.</b><br>
-    Hier ein Ausschitt aus den Aufgaben:
+<li><b>Loading the modeled 3D world as a 3DS-file into the Spacer and enliven it with the other created objects and textures.</b><br>
+    Here an excerpt from these tasks:
     <ul>
-    <li>Die Welt texturieren: d.h. Texturen auf Polygone legen und ausrichten.
-        Dabei kann ein Texture-Pool verwaltet werden.
-    <li>Bäume, Zäune, Sträucher, Fackeln und mehr in die Welt einfügen
-    <li>Items (Tränke, Waffen etc.) und Truhen mit Items entsprechend der
-        geplanten Story einsetzen
-    <li>Das Wegenetz für die NPC-AI erstellen. NPCs können sich zwar frei
-        bewegen, benötigen aber ein solches Wegenetz, um auch weiter entfernte
-        (>10m?!) ohne Probleme zu finden.
-    <li>Geräusche (Sounds und Daytime-Sounds) platzieren
-    <li>Die Welt ausleuchten, d.h. Lichtobjekte setzen
-    <li>Ereignisse (Events) für die Story erstellen. Das sind z.B. die
-        berüchtigten Winden, Schalter, Fallen, Rätsel u.v.m.
-    <li>und einige andere Dinge: Kamerafahrten,
+    <li>Texturing the world: e.g. laying textures unto polygons and aligning them ["Mapping"].
+        To do this one can make use of a texture-pool. 
+    <li>Inserting trees, fences, bushes, torches and more into the world
+    <li>Inserting items (potions, weapons etc.) and chests with items according to the intended story
+    <li>Creating the Waynet for the NPC-AI. NPCs can move freely, but they need such a Waynet in order to also find locations without problems that are further (>10m?!) away.
+    <li>Placing Sounds (Sounds and Daytime-Sounds)
+    <li>Illuminate the world, e.g. placing light objects
+    <li>Creating Events for the Story. That are for example the infamous winches, switches, traps, riddles and much more
+    <li>and several other things: Tracking shots [Kamerafahrten], ...
     </ul>
-<li><b>Die Story in den Scripten niederschreiben und mit der Welt verknüpfen</b><br>
-    Dies ist ein wesentlicher Teil, der aus einer recht statischen Welt, erst
-    ein lebendiges Etwas ... ein Spiel ... erstellt:
+<li><b>Writing down the Story in the scripts and linking it with the world</b><br>
+    This is an essential part, the one that, from a relatively static world, creates a living Something... a Game: 
     <ul>
-    <li>NPC-Instanzen (Menschen und Monster) erzeugen. Diese werden mit Körpermeshes, Animationen etc. versorgt
-    <li>Den NPCs Tagesabläufe verpassen. Sie z.B. am Tage zu einer Arbeitsstelle zu schicken und am Abend zurück ins Bett.
-    <li>Die Reaktion der NPCs auf den Spieler programmieren: Das ist zum einen die allgemeine NPC-AI sowie diverse Sonderreaktionen (ich sage nur "Mud")
-    <li>Dialoge mit dem Spieler scripten und in Quests (Aufträge) einbinden.
-    <li>Die NPCs über ein zentrales Script in die Level einfügen.
+    <li>Generating NPC-Instances (Humans and Monsters). These are supplied with body meshes, animations etc. 
+    <li>Giving fitting routines to the NPCs. For example sending them at day to a working place and in the evening back to bed. 
+    <li>Programming the reactions of the NPCs to the player: This is one one hand the general NPC-AI, on the other hand special reactions (I just say "Mud")
+    <li>Scripting Dialogues with the player and embedding them into Quests (Missions).
+    <li>Inserting the NPCs via a central Script into the level.
     </ul>
 </ol>
-Ihr seht: Der Spacer übernimmt das Ausstatten der Welt mit allem, was nicht lebt
-(ausgenommen die Pflanzen vielleicht). So wird aus einem schnöden langweiligen
-3D-Mesh eine schon richtig gemütliche oder ungemütliche Welt, der
-allerdings noch ein wesentlicher Bestandteil fehlt: Die Lebendigkeit von
-Menschen und Monstern.
+You see: The Spacer handles equipping the World with everything that is not alive (except the plants maybe). This way, out of a disdainful, boring 3D-Mesh, evolves a quite cozy or not so cozy world, but in which still one essential aspect is lacking: The liveliness of humans and monsters. 
 
 <div class="ende">
 <hr noshade size=2 width=50%>
-Ende.
+End.
 <br>
-Machs gut und danke für den Fisch
+Do well and thanks for the fish.
 </div>
 
 <br>
@@ -144,8 +130,6 @@ Machs gut und danke für den Fisch
 </td>
 </tr>
 </table>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </BODY>
 </HTML>
