@@ -387,7 +387,7 @@ main {
 .icon-box > ul li {
   padding: 10px 20px;
   width: calc(var(--box-width) / 2);
-  font-size: 10px;
+  font-size: 11px;
 }
   
 .icon-box > ul li:last-child {
