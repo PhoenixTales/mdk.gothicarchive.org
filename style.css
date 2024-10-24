@@ -481,7 +481,6 @@ main {
 
 .icon-box > span:last-of-type {
   grid-area: headerRight;
-  text-align: right;
 }
 
 .icon-box ul {
