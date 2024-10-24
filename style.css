@@ -452,40 +452,61 @@ main {
 } */
 
 .icon-box {
-  overflow: auto;
+  align-items: start;
+  overflow-x: auto;
+  overflow-y: hidden;
   border: 1px solid #464646;
   background: #101010;
   scrollbar-color: #424242 #101010;
   margin-bottom: 30px;
-  max-height: 450px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-areas: 
+  "headerLeft headerRight"
+  "leftList rightList";
 }
 
-.icon-box p {
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 11px;
+.icon-box > span {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #464646;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.icon-box p::after {
-  content: '';
-  border-top: 1px solid #464646;
-  flex-grow: 1;
+.icon-box > span:first-of-type {
+  grid-area: headerLeft;
+  border-right: 1px solid #464646;
+}
+
+.icon-box > span:last-of-type {
+  grid-area: headerRight;
 }
 
 .icon-box ul {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(auto-fill, 80px);
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, auto);
   align-items: center;
   padding: 15px;
   margin: 0;
   list-style: none;
 }
 
+.icon-box ul:first-of-type {
+  grid-area: leftList;
+  margin-right: 15px;
+}
+
+.icon-box ul:last-of-type {
+  grid-area: rightList;
+  margin-left: 15px;
+}
+
 .icon-box figure {
-  width: 100%;
+  width: 80px;
   height: 100%;
   margin: 0;
 }
