@@ -385,14 +385,14 @@ main {
 }
   
 .icon-box > ul li {
-  padding: 10px;
+  padding: 10px 20px;
   width: calc(var(--box-width) / 2);
   font-size: 10px;
 }
   
 .icon-box > ul li:last-child {
   text-align: right;
-  border-left: 1px solid #464646;
+  /*border-left: 1px solid #464646;*/
 }
 
 .icons {
