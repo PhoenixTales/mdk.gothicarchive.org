@@ -543,16 +543,6 @@ footer {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     background: rgb(25, 25, 25, 0.8); /*background: rgba(0, 0, 0, 0.8);*/
-    border-bottom: 2px solid rgb(0, 0, 0, 0.9);
-  }
-
-  .menu-btn {
-    background: rgb(25, 25, 25); 
-    /*border-top: 2px solid #464646;
-    border-left: 2px solid #464646;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;*/
-    border: 2px outset #464646;
   }
 
   body:has(#menu-toggle:checked) .menu-bar {
@@ -560,6 +550,15 @@ footer {
     top: 0;
     box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
     margin-bottom: 18px;
+  }
+
+  .menu-btn {
+    background: rgb(25, 25, 25); 
+    border: 2px outset #464646;
+  }
+
+  body:has(#menu-toggle:checked) .menu-btn {
+    border-style: inset;
   }
 
   label[for="menu-toggle"] {
