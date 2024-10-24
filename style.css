@@ -197,10 +197,6 @@ header a:visited {
   text-decoration: none;
 }
 
-header a:hover {
-  color: #9a5050;
-}
-
 header img {
   max-width: 220px;
   aspect-ratio: 325/257;
@@ -215,6 +211,9 @@ header h1 {
   text-align: center;
   max-width: 200px;
   font-size: 16px;
+}
+header a, header a:hover {
+  color: #9a5050;
 }
 
 .menu-index {
