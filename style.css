@@ -41,16 +41,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/*
-h1 {
-  font-size: inherit;
-}
-
-h2 {
-  font-size: 12px;
-  font-weight: normal;
-}*/
-
 
 h1 {
   padding-top: 0;
@@ -61,6 +51,11 @@ h1 {
 h2 {
   font-family: verdana,helvetica;
   font-size: 14pt;
+}
+
+.about h2 {
+  font-size: 12px;
+  font-weight: normal;
 }
 
 h3 {
