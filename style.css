@@ -467,17 +467,17 @@ main {
 }
 
 .icon-box > span {
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #464646;
-  font-size: 10px;
-  text-transform: uppercase;
-  font-weight: 700;
+  padding: 3px;
+  margin: 0 50px 15px;
+  border-bottom: 2px dotted #464646;
+  border-right: 2px dotted #464646;
+  font-size: 12px;
+  text-align: center;
+  color: rosybrown;
 }
 
 .icon-box > span:first-of-type {
   grid-area: headerLeft;
-  border-right: 1px solid #464646;
 }
 
 .icon-box > span:last-of-type {
