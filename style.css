@@ -52,8 +52,16 @@ h2 {
 }*/
 
 
-h1{font-family:verdana,helvetica;font-size:16pt;}
-h2{font-family:verdana,helvetica;font-size:14pt;}
+h1 {
+  padding-top: 0;
+  font-family: verdana,helvetica;
+  font-size: 16pt;
+}
+
+h2 {
+  font-family: verdana,helvetica;
+  font-size: 14pt;
+}
 
 h3 {
   font-family: serif;
