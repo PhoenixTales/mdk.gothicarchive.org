@@ -115,6 +115,7 @@ a:hover {
   color: #fdc698;
 } */
 
+/*
 a img {
   opacity: 1;
   transition: .4s ease-in-out;
@@ -123,6 +124,7 @@ a img {
 a:hover img {
   opacity: 0.6;
 }
+*
 
 /* Base - Scrollbar */
 
