@@ -377,7 +377,7 @@ main {
   /* top: 0; */
   margin: 0;
   margin-bottom: 10px;
-  padding: 0;
+  padding: 10px 30px;
   text-transform: uppercase;
   /*border-bottom: 1px solid #464646;
   border-right: 1px solid #464646;*/
@@ -385,9 +385,8 @@ main {
 }
   
 .icon-box > ul li {
-  margin: 10px 30px;
   padding: 5px;
-  border: 2px outset;
+  border: 2px outset #464646;
   width: calc(var(--box-width) / 2);
   font-size: 11px;
 }
