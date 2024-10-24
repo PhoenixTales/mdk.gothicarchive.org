@@ -385,7 +385,7 @@ main {
 }
   
 .icon-box > ul li {
-  padding: 5px;
+  /*padding: 5px;*/
   border: 2px inset #464646;
   width: calc(var(--box-width) / 2);
   font-size: 11px;
