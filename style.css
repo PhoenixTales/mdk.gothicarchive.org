@@ -374,7 +374,8 @@ main {
 
 .icon-box ul:first-child {
   position: sticky;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   top: 0;
   font-size: 12px;
