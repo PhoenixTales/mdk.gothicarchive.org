@@ -295,6 +295,7 @@ ul.copyright li {
 main {
   max-width: 100%;
   padding: 0 50px;
+  overflow-x: hidden;
 }
 
 .article,
@@ -358,19 +359,22 @@ main {
 } */
 
 .icon-box {
+  --box-width: 484px;
+
   overflow: auto;
   border: 1px solid #464646;
   background: #101010;
   scrollbar-color: #424242 #101010;
   margin-bottom: 30px;
+  max-height: 400px;
 }
 
 .icon-box > ul {
   position: sticky;
   display: flex;
-  width: 100%;
+  z-index: 5;
+  width: max-content;
   top: 0;
-  left: 0;
   margin: 0;
   margin-bottom: 10px;
   padding: 0;
@@ -382,8 +386,8 @@ main {
 }
   
 .icon-box > ul li {
-  width: 50%;
   padding: 10px;
+  width: calc(var(--box-width) / 2);
 }
   
 .icon-box > ul li:last-child {
@@ -392,12 +396,8 @@ main {
 }
 
 .icons {
-  display: flex;
-  gap: 70px;
-  align-items: start;
-  justify-content: space-between;
-  max-height: 400px;
-  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, calc(var(--box-width) / 2));
 }
 
 .icons ul {
@@ -405,8 +405,12 @@ main {
   gap: 10px;
   grid-template-columns: repeat(2, 80px);
   align-items: center;
-  padding: 0;
+  padding: 15px;
   margin: 0;
+}
+
+.icons ul:last-child {
+  justify-self: end;
 }
 
 .icons ul:last-child li:last-child {
