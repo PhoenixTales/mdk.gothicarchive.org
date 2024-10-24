@@ -478,6 +478,7 @@ main {
   align-items: center;
   padding: 15px;
   margin: 0;
+  list-style: none;
 }
 
 .icon-box figure {
@@ -559,7 +560,7 @@ main {
 
 .ende {
   font-family: verdana, helvetica;
-  font-size: 8pt;
+  font-size: 10pt;
   text-align: center;
   margin-top: 20px;
 }
