@@ -357,19 +357,9 @@ main {
   width: 47px;
 } */
 
-
 .icon-box {
-  display: flex;
-  gap: 70px;
-  align-items: start;
-  justify-content: space-between;
-  max-height: 400px;
   overflow: auto;
   border: 1px solid #464646;
-  margin-bottom: 30px;
-  padding: 15px;
-  background: #101010;
-  scrollbar-color: #424242 #101010;
 }
 
 .icon-box ul:first-child {
@@ -380,14 +370,25 @@ main {
   top: 0;
   font-size: 12px;
   text-transform: uppercase;
-  border: 1px solid;
 }
-
+  
 .icon-box ul:first-child li:first-child {
   border-right: 1px solid;
 }
 
-.icon-box ul {
+.icons {
+  display: flex;
+  gap: 70px;
+  align-items: start;
+  justify-content: space-between;
+  max-height: 400px;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #101010;
+  scrollbar-color: #424242 #101010;
+}
+
+.icons ul {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(2, 80px);
@@ -396,24 +397,24 @@ main {
   margin: 0;
 }
 
-.icon-box ul:last-child li:last-child {
+.icons ul:last-child li:last-child {
   grid-column-start: 2;
 }
 
-.icon-box figure {
+.icons figure {
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
-.icon-box img {
+.icons img {
   width: 42px;
   height: 42px;
   border: none;
   margin: 0 auto;
 }
 
-.icon-box figcaption {
+.icons figcaption {
   max-width: 100%;
   height: 34px;
   font-family: monospace;
@@ -424,7 +425,7 @@ main {
   text-overflow: ellipsis;
 }
 
-.icon-box a {
+.icons a {
   color: inherit;
 }
 
