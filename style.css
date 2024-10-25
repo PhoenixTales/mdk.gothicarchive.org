@@ -155,11 +155,11 @@ nav {
 
 nav ul {
   list-style: none;
-  padding-left: 12px;
 }
 
 nav h2 {
   margin-top: 4em;
+  margin-bottom: 1em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
@@ -217,6 +217,11 @@ header h1 {
 .base-links {
   padding: 0;
   margin: 0;
+}
+
+.tree, .tree ul {
+  margin: 0;
+  padding-left: 12px;
 }
 
 .download {
