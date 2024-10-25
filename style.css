@@ -304,6 +304,10 @@ main {
   overflow-x: hidden;
 }
 
+.article {
+  max-width: 500px;
+}
+
 .article,
 .article p,
 .article li,
