@@ -71,11 +71,6 @@ img {
   display: block;
 }
 
-pre {
-  max-width: 100%;
-  white-space: pre-wrap;
-}
-
 ::selection {
   background: #2d3a34;
 }
@@ -320,6 +315,16 @@ main {
   font-size: 10pt;
 }
 
+
+.article pre {
+  background: black;
+  max-width: 100%;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 8pt;
+  overflow-x: scroll;
+}
+
 .content {
   font-family: "Verdana, Arial, Helv, Helvetica, SanSerif";
 
@@ -338,13 +343,6 @@ main {
 .content table {
   width: 100%;
   margin-bottom: 1.5em;
-}
-
-.content pre {
-  padding: 0;
-  margin: 0;
-  font-family: monospace;
-  font-size: 8pt;
 }
 
 .about {
