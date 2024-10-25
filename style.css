@@ -239,7 +239,7 @@ header h1 {
   position: absolute;
   top: 0;
   border-top: 1px solid #554b43;
-  width: calc(50% - 15ch);
+  width: calc(50% - 13ch);
   background-color: #554b43;
 }
 
