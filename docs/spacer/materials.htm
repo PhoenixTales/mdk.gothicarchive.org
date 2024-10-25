@@ -1,25 +1,24 @@
+---
+title: Materials in the Spacer
+---
+
+
 <HTML>
-<HEAD>
-    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=iso-8859-1">
-    <TITLE>Gothic-Documents: Materialien im Spacer</TITLE>
-    <META NAME="AUTHOR" CONTENT="Bert Speckels">
-    <link rel=stylesheet type="text/css" href="../style.css">
-</HEAD>
-<BODY bgcolor="#ffffff" text="#000000" link="000099" vlink="000099" >
+        <section class="content">
 
 <!---
  Kopfzeile
  --->
-<table width="500" cellpadding=4 cellspacing=0 bgcolor="#FFFFDD" border=2>
+<table width="500" cellpadding=4 cellspacing=0 bgcolor="#262422" border=2>
 <!--- Art des Dokuments und Name des Projekts --->
 <tr>
         <td width=50% align=left>
-                <font color="#000000"><b>
-                Dokumentation
+                <font color="#9c9c92"><b>
+                Documentation
                 </b></font>
         </td>
         <td width=50% align=right>
-                <font color="#000066"><b>
+                <font color="#9c9c92"><b>
                 GOTHIC
                 </b></font>
         </td>
@@ -27,18 +26,18 @@
 <!--- Titel des Dokuments --->
 <tr>
         <td colspan=2 align=center>
-                <font color="#660000"><b>
-                Materialien und Texturen
+                <font color="#9a5050"><b>
+                Materials and Textures
                 </b></font>
         </td>
 </tr>
 <!--- Name des Autors und Datum der letzten Aktualisierung --->
 <tr>
         <td width=50% align=left><b>
-                Autor: Bert Speckels
+                Author: Bert Speckels
         </b></td>
         <td width=50% align=right><b>
-                Version: 14.August 2001
+                Version: August 14th 2001
         </b></td>
 </tr>
 </table>
@@ -49,91 +48,87 @@
  Inhalt
  --->
 
-<table width="500" cellpadding=4 cellspacing=0 bgcolor="#EEEEEE" border=0>
+<table width="500" cellpadding=10 cellspacing=0 bgcolor="#20212c" border=1>
+<tr>
+<td>
+        <b>Content</b>
+        <ul>
+                <li>1 Texturing
+                <li>2 Materials
+                        <ul>
+                        <li>2.1 Materialpool and Materiallist
+                        <li>2.2 Material Editor
+                        <li>2.3 Materialattributes
+                        </ul>
+                </ul>
+                        
+        <a href="index.htm"><b><i>to the Spacer index</i></b></A>
+</td>
+</tr>
+</table>
+
+
+<table width="500" cellpadding=4 cellspacing=0 bgcolor="#0f0f0f" border=0>
 <tr>
 <td>
 <font size=2 face="Verdana,Arial, Helv, Helvetica, SanSerif">
 
-<ul>
-<li>1 Texturieren
-<li>2 Materialien
-    <ul>
-    <li>2.1 Materialpool und Materialliste
-    <li>2.2 Material Editor
-    <li>2.3 Materialeigenschaften
-    </ul>
-</uL>
+<H1>1 Texturing</H1>
 
-
-<hr noshade size=2>
-
-<H1>1 Texturieren</H1>
-
-Um einen Level oder auch Gegenstände zu texturieren, geht man wie folgt vor:
+In order to texture a level or objects, one proceeds as follows:
 
 <ol>
-<li>Den Level oder den Gegenstand (.3DS oder .ZEN) in den Spacer laden
-<li>Das Mesh compilieren. Dabei die Checkbox "EditorModus" aktivieren
+<li>Load the level or object (.3DS or .ZEN) in the Spacer.
+<li>Compile the Mesh. When doing so, activate the checkbox "EditorMode".
 </ol>
 
-Nach dem Compilieren können nun mit der Maus einzelne oder auch ganze Polygongruppen
-selektiert werden:
+After compiling one can now select with the mouse single polygons or whole polygon groups:
 <ul>
-<li>Mit einem Mausklick können einzelne Polygon selektiert bzw. deselektiert werden.
-<li>Bei gedrückter Maustaste kann man mit der Maus über mehrere Polygone "fahren" und diese so nacheinander selektieren bzw. deselektieren.
-<li>Mit der Taste X wird eine Selektion entfernt
-<li>Mit der Leertaste wird die Selektion verborgen, die Texturierung wird also kurzzeitig sichtbar
+<li>With one mouse click one can select or deselect single polygons.
+<li>When keeping the mouse button pressed one can "roll over" several polygons with the mouse thereby selecting or deselecting them one after another.
+<li>With the key X a selection is removed.
+<li>With SPACE key the selection gets hidden, thereby making the texuring temporarily visible.
 </ul>
 
-Um den selektierten Polygonen nun ein Material (inklusive seiner Textur) zuzuweisen, benutzt
-man die beiden oberen Button in der vertikalen Toolbar:
+In order to now assign a Material (including its Texture) to the selected polygons, one uses the two top buttons in the vertical toolbar: 
 <ul>
-<li>"Apply material with mapping" weist den Polygonen das im Materialeditor ausgewählte Material zu und wendet das eingestellte Mapping (Art und Weise, wie die Textur auf die Polygone "tapeziert" wird) an.
-<li>"Apply material without mapping" führt kein erneutes Mapping durch. Dadurch bleibt die Positionierung, Skalierung und Rotation der Textur auf den Polygonen erhalten.
+<li>"Apply material with mapping" assigns to the polygons the material selected in the material editor and applies the setted mapping (the way in which the texture is "papered" onto the polygons).
+<li>"Apply material without mapping" does not perform a mapping again. Thereby the positioning, scaling and rotation of the texture on the polygons is preserved.
 </ul>
 
-Bei gedrückter Leertaste können die Texturen auf den Polygonen verschoben,
-skaliert und rotiert werden. Mit der Taste G kann dabei ein LockGrid eingeschaltet werden (einstellbar in den Spacer-Settings):
+While holding SPACE the textures on the polygons can be shifted, scaled or rotated. With the key G a LockGrid can be activated (adjustable in the Spacer-Settings):
 <ul>
-<li>Die Cursortasten <u>verschieben</u> die Textur
-<li>Mit dem Ziffernblock wird die Textur <u>skaliert</u>
-<li>ENTF und BILDAB <u>rotiert</u> die Texur, ebenso wie EINFG und BILDAUF (andere Schrittweite)
-<li>Mit PAD_DIV und PAD_MUL kann man die Texur horizontal <u>scheren</u>
-<li>Mit PAD_MINUS und PAD_PLUS kann man die Texur vertikal <u>scheren</u>
-<li>Schliesslich kann man mit PAD_EINFG und PAD_ENTF die Textur <u>spiegeln</u>
+<li>The cursor keys <u>shift</u> the texture.
+<li>With the numpad the texture is <u>scaled</u>.
+<li>Del [Delete] and PgDn [Page Down] <u>rotates</u> the texure, as well as Ins [Insert] und PgUp [Page Up] (different increment).
+<li>With PAD_DIV [Divide] and PAD_MUL [Multiply] one can <u>sheer</u> the texture horizontally. 
+<li>With PAD_MINUS and PAD_PLUS one can <u>sheer</u> the texture vertically.
+<li>Finally one can <u>mirror</u> the texture with PAD_INS and PAD_DEL.
 </ul>
 
-<H1>2 Materialien</H1>
+<H1>2 Materials</H1>
 
 <p>
-Der Materialeditor ist ein wichtiges Werkzeug im EditorModus des Spacers.
-Ein Material besitzt als wohl wichtigste Eigenschaft eine Textur.
-Weitere wichtige Eigenschaften lassen sich entweder im Materialeditor
-oder im Objects-Dialog festlegen.
+The Material editor is an important tool in the EditorMode of the Spacer.
+A material has a texture as its most important attribute.
+Additional important attributes can be set either in the Material editor or in the objects dialogue.
 </p>
 
-<H2>2.1 Materialpool und Materialliste</H2>
+<H2>2.1 Material Pool and Material List</H2>
 
 <img src="pics/material_list.jpg">
 
 <p>
-In der Materialliste werden die zur Verfügung stehenden Materialien aufgelistet.
-Der Spacer verwaltet einen Materialpool, der in verschiedene Material-Filter
-unterteilt ist. In der Datei Matlib.ini (in _work/tools/data) werden die einzelnen Filter
-gespeichert. Pro Filter wird dort eine pml-Datei angelegt, die alle Materialien enthält. Das Speichern
-des Materialpools kann über das Settings-Menü durchgeführt werden (Save Materialfilter).
+In the Material list the available materials are listed.
+The Spacer manages a material pool, which is divided into different material filters. In the file Matlib.ini (in _work/tools/data) the single filters are saved. For every filter a pml-file is created there, that contains all the materials. Saving the material pool can be performed via the settings menu (Save Material filter).
 </p>
 
 <p>
-Kann eine Textur aus dem Level keinem Filter zugeordnet werden, landet diese
-erst einmal im TRASH-Filter. Mit den beiden Buttons NEW und DEL in der Materialliste
-können neue Filter angelegt bzw. vorhandene entfernt werden. Das Zuordnen von Materialien
-zu einem Filter geschieht im Materialeditor.
+If a texture from a level cannot be allocated to a filter, it lands in the TRASH filter at first. With the buttons NEW and DEL in the material list new filters can be created or existing ones removed. Applying materials to a filter happens in the material editor.
 </p>
 
 <p>
-Um ein Material in den Materialeditor bzw. den Objects-Dialog zu laden, reicht ein einfacher Mausklick
-auf das gewünschte Material in der Liste.
+In order to load a material into the material editor or the objects dialogue respectively, it suffices a simple mouse click unto the desired material in the list. 
 </p>
 
 
@@ -141,104 +136,82 @@ auf das gewünschte Material in der Liste.
 
 <img src="pics/material_ed.jpg">
 
-Der Materialeditor bietet einige Möglichkeiten, die hier kurz aufgezählt sind:
+The Material editor offers several possibilities, which in short are listed here:
 <ul>
-<li>Anlegen neuer Materialien
-<li>Zweisung von Texturen
-<li>Filterzuordnung
-<li>Gruppenzuordnung
-<li>Zuordnung zu Quickslots
+<li>Creation of new materials
+<li>Assignment of textures
+<li>filter assignment
+<li>group assignment
+<li>Assignment to quickslots
 </ul>
 
 <p>
-Wir wollen nun einmal ein <u>neues Material anlegen</u>. Dazu klicken wir auf den Button NEW
-und geben einen Namen für das Material ein. Danach können wir noch wählen, in welchen
-Materialfilter es gespeichert werden soll. (Bugalarm: Das Fenster nicht über das
-Schliessen-Kreuz beenden!). Nun können wir dem Material noch eine Textur (Button "...")
-und andere Eigenschaft zuweisen.
+We want to <u>create a new material</u> now. For this we click on the Button NEW
+and type a namen for the material. After this we can also choose, in which material filter it should be saved. (Bug alarm: Do not close the window via the closing X!). Now we can assign a texture (Button "...") and other attributes to the Material.
 </p>
 
 <p>
-Das Material kann einfach dadurch wieder <u>entfernt</u> werden, indem man Ihr den Filter
-"TRASH" (daher der Name) zuordnet.
+The material can simply <u>removed</u> again, by assigning it the filter "TRASH" (hence the name).
 </p>
 
 <p>
-Nun wollen wir einen etwas einfacheren Weg einschlagen um Materialien zu erzeugen. Vor
-allem wollen wir gleich mehrere mit einem Schlag anlegen. Dazu benutzen wir den ADD-Button im
-Materialeditor. Nun öffnet sich ein Dateiauswahl-Dialog, mit dem wir uns die Texturen auswählen,
-die wir als neues Material in den Materialpool laden möchten. Eine Auswahl mehrerer Texturen ist möglich. Nachdem wir die ausgewählten Texturen bestätigt haben, erscheint wieder der bekannte
-Dialog zur Auswahl eines Filters. Man kann die Materialien
+Now we want to take a bit of a simpler path to create materials. Especially we want to create several at one stroke now. For this we use the ADD button in the material editor. Now opens a file-selection dialogue, with which we select us the textures,
+that we want to load as a new material into the material pool. A selection of several textures is possible. After we confirmed the selected textures, appears again the familiar dialogue for the selection of a filter. One can the materials...
 </p>
 <ul>
-<li>erst einmal in den TRASH legen (wenn man das Material nur kurzzeitig benötigt),
-<li>einen vorhandenen Filter zuordnen oder
-<li>gleich in einen neuen Filter speichern.
+<li>first of all put into TRASH (if the material is only needed temporarily),
+<li>assign an existing filter or
+<li>save directly into a new filter.
 </ul>
 
 <p>
-Nun wollen wir vorhandene <u>Materialien einem Filter zuordnen</u>. Dazu gibt es im
-Materialeditor die Auswahlbox "Filter". Nun, es ist einfach, ein einzelnes Material in einen
-Filter zu verschieben. Doch wird es umständlicher, wenn wir dies mit einer ganzen Menge von
-Materialien machen wollen. Dazu können wir bei einer Textur aus dem Zielfilter den Button FIX
-aktivieren. Dann wird beim jedem Mausklick in der Materialliste das angeklickte Material in den fixierten
-Filter geschoben.
+Now we want to assign existing <u>materialien to a filter</u>. For this there is the selection box "Filter" in the material editor. Now it is easy to move a single material into a filter. But it becomes more cumbersome, if we want to do this with quite a number of materials. For this we can activate at a Texture from the targeted filter the button FIX. Then for every mouse click in the material list the clicked material will be moved into the fixed filter.
 </p>
 
 <p>
-Eine weitere Unterteilung der Materialien findet in Form von fest vorgegebenen <u>Materialgruppen</u> statt.
-Diese bestimmen einige weitere Eigenschaften des Materials (z.B. Schrittgeräusche).
+Another subdivision of the materials happens in the form of fixed preset <u>material groups</u>.
+These define several additional attributes of the material (e.g. footstep sounds).
 </p>
 
 <p>
-Die <u>QuickSlots</u> wurden eingeführt, um das einfache Texturieren im Freelook-Modus (Taste F3)
-zu ermöglichen. In diesem Modus können die Polygone nämlich sehr bequem mit der Maus selektiert (linke Maustaste)
-und einer ausgewählten Textur zugewiesen (rechte Maustaste) werden. Mit den Quickslot-Tasten (1-9) lassen sich
-nun maximal 9 Materialien direkt auswählen, ohne aus dem Freelook-Modus auszusteigen.
+The <u>QuickSlots</u> were introduced to allow for the simple texturing in the freelook mode (F3 key). Because in this mode the polygons can be selected very comfortable with the mouse (left mouse button) and assigned to a selected texture (right mouse button). With the Quickslot-keys (1-9) it is now possible to select maximally 9 materials directly, without to get out of the freelook mode.
 </p>
 
 <p>
-Weitere Einstellungen im Materialeditor bestimmen das <u>Mapping</u>, mit dem die Material-Textur auf die
-Polygone gelegt wird (siehe "Texturierung") sowie die Feinheit, mit der Texturen bewegt werden können ("<u>Tex.Move</u>").
-Diese Einstellung hat bei eingeschaltetem Grid (Taste G) alledings eine Wirkung.
+Additional settings in the material editor define the <u>mapping</u>, with which the material texture is laid unto the polygons (see "texturing") as well as the subtlety, with which the textures can be moved ("<u>Tex.Move</u>").<br>
+This setting has no effect though with activated Grid (G key).
 </p>
 
 <p>
-Die <u>Farbe</u> eines Materials gibt an, wie dieses gezeichnet werden soll, wenn die Textur nicht dargestellt wird
-(z.B. wenn die Textur nicht gefunden wurde). Hier bietet sich in den meisten Fällen die Durchschnittsfarbe (Avg.Color)
-an. Die Farbe wird als entsprechend farbiger Rand um die Texur im Materialeditor angezeigt.
+The <u>colour</u> of a material indicates, how it should be drawn, if the texture is not displayed (e.g. when the texture hasn't been found). Here in most cases the average colour (Avg.Color) lends itself the best. The colour is displayed as a corresponding, coloured frame around the texture in the material editor.
 </p>
 
 <p>
-Der <u>Alpha-Wert</u> einer Textur gibt schliesslich die Transparenz einer Textur an: 0=Komplett
-durchsichtig, 255 = komplett undurchsichtig.
-
+The <u>Alpha-Value</u> of a texture exclusively specifies the transparency of a texture: 0 = completely transparent, 255 = completely intransparent.
 </p>
 
-<H2>2.3 Materialeigenschaften</H2>
+<H2>2.3 Material Attributes</H2>
 
 <img src="pics/material_props.jpg">
 
 <p>
-Ein paar weitere Einstellungen können im Objects-Dialog vorgenommen werden
-(beim Editieren nicht den Button APPLY vergessen!). Die einzelnen Felder sind
-in der Online-Hilfe des Spacers (siehe Help-Fenster) eigentlich recht gut erklärt.
+A few more setting can be done in the objects dialogue (when Editing do not forget the APPLY button!). The single fields are explained in the Online-Help of the Spacer (see help window) quite well.
 </p>
 
 <div class="ende">
 <hr noshade size=2 width=50%>
-Ende.
+End.
 <br>
-Machs gut und danke für den Fisch
+Do it well and thanks for the fish.
 </div>
 
 <br>
 
+<a href="index.htm"><b><i>to the Spacer index</i></b></a>
+
 </td>
 </tr>
 </table>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 </BODY>
 </HTML>

@@ -159,10 +159,11 @@ nav ul {
 }
 
 nav h2 {
-  margin-top: 5em;
+  margin-top: 4em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-size: 0.8rem;
+  font-weight: normal;
 }
 
 .menu-bar,
