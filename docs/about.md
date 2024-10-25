@@ -83,10 +83,10 @@ title: About the Gothic MDK
 
 * Flosha
 * 21.10.2024  
-{: .author-date }
+{: .doc-info }
 
 
-## Why this website in this form
+## Why this website in this form?
 
 Several approaches have been made in the past to create an online Gothic modding documentation. 
 
