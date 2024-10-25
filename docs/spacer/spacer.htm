@@ -61,18 +61,17 @@ It is easier to describe, what the Spacer cannot do. Therefore I will start with
 The Space cannot:
 <ul>
 <li>Create a 3D World<br>
-    For this a program for the creation of 3D meshes is necessary, such as 3D-Studio Max [today, Blender is the recommended 3D modeling program of choice for Gothic Modding -Flosha]. 
-<li>Enliven the world with humans and monsters (NPCs)<br>
-    This is completely handled by the scripts. The Spacer can only <em>prepare</em> the world for living beings, for instance by placing a waynet.
+    For this a program for the creation of 3D meshes is needed, such as 3D-Studio Max [today, Blender is the recommended 3D program of choice for Gothic Modding -Flosha]. 
+<li>Enliven the world with humans and monsters (NPCs).<br>
+    This is completely handled by the scripts. The Spacer can only <em>prepare</em> the world for living beings, for instance by lying down a Waynet.
 <li>Design the Story<br>
     This too is completely handled by the scripts, and here too the Spacer can only prepare: Include Events into the world, distribute objects etc...
 </ul>
-Thus, one thing is clear: The Spacer is only one tool of many, that was available used in the development of Gothic. To look at it in a very simplified way, the development of a game like Gothic can be imagined as follows:
+Thus, one thing is clear: The Spacer is only one tool of many, that was available and used in the development of Gothic. To look at it in a very simplified way, the development of a game like Gothic can be imagined as follows:
 
 <ol>
-<li><b>Creating the 3D worlds and objects, creatures etc. with a 3D programme and
-    respecting numerous requirements while doing so</b><br>
-    Such requirements are, for example
+<li><b>Creating the 3D worlds and objects, creatures etc. with a 3D programme and respecting numerous requirements while doing so.</b><br>
+    Such requirements are, for example:
     <ul>
     <li>Which height (N)PCs can climb?
     <li>Which Slopes (N)PCs can still walk upon?
@@ -81,42 +80,42 @@ Thus, one thing is clear: The Spacer is only one tool of many, that was availabl
     <li>Where lies the justifiable upper limit for the amount of polygons?
     <li>and many others ...
     </ul>
-    Aside from levels all  kinds of other 3D objects are also created with the 3D programme:
+    Aside from levels all kinds of other 3D objects are also created with the 3D programme:
     <ul>
     <li>Trees and bushes
     <li>Fences, Stones, fireplaces
     <li>Items and MOBs (winches etc.)
     <li>many more ...
     </ul>
-<li><b>Creating additional necessary data</b><br>
+<li><b>Creating additional necessary data:</b><br>
     <ul>
     <li>Textures
     <li>Item-Instances (are generated in the Scripts)
     </ul>
-<li><b>Loading the modeled 3D world as a 3DS-file into the Spacer and enliven it with the other created objects and textures.</b><br>
+<li><b>Loading the modeled 3D world as a 3DS-file into the Spacer and fill it with the other created objects and textures.</b><br>
     Here an excerpt from these tasks:
     <ul>
     <li>Texturing the world: e.g. laying textures unto polygons and aligning them ["Mapping"].
         To do this one can make use of a texture-pool. 
-    <li>Inserting trees, fences, bushes, torches and more into the world
-    <li>Inserting items (potions, weapons etc.) and chests with items according to the intended story
+    <li>Inserting trees, fences, bushes, torches and more into the world.
+    <li>Inserting items (potions, weapons etc.) and chests with items as intended by the story.
     <li>Creating the Waynet for the NPC-AI. NPCs can move freely, but they need such a Waynet in order to also find locations without problems that are further (>10m?!) away.
-    <li>Placing Sounds (Sounds and Daytime-Sounds)
-    <li>Illuminate the world, e.g. placing light objects
-    <li>Creating Events for the Story. That are for example the infamous winches, switches, traps, riddles and much more
-    <li>and several other things: Tracking shots [Kamerafahrten], ...
+    <li>Placing Sounds (Sounds and Daytime-Sounds).
+    <li>Illuminate the world, e.g. placing light objects.
+    <li>Creating Events for the Story. These are for example the infamous winches, switches, traps, riddles and much more.
+    <li>And several other things: Tracking shots [Kamerafahrten], ...
     </ul>
-<li><b>Writing down the Story in the scripts and linking it with the world</b><br>
-    This is an essential part, the one that, from a relatively static world, creates a living Something... a Game: 
+<li><b>Writing down the Story in the scripts and linking it with the world.</b><br>
+    This is an essential part, the one that, from a relatively static world, creates a living something... a game: 
     <ul>
     <li>Generating NPC-Instances (Humans and Monsters). These are supplied with body meshes, animations etc. 
-    <li>Giving fitting routines to the NPCs. For example sending them at day to a working place and in the evening back to bed. 
-    <li>Programming the reactions of the NPCs to the player: This is one one hand the general NPC-AI, on the other hand special reactions (I just say "Mud")
-    <li>Scripting Dialogues with the player and embedding them into Quests (Missions).
+    <li>Giving fitting routines to the NPCs. For example sending them at daytime to a working place and in the evening back to bed. 
+    <li>Programming the reactions of the NPCs to the player: This is on one hand the general NPC-AI, on the other hand special reactions (I just say "Mud").
+    <li>Scripting dialogues with the player and embedding them into Quests (Missions).
     <li>Inserting the NPCs via a central Script into the level.
     </ul>
 </ol>
-You see: The Spacer handles equipping the World with everything that is not alive (except the plants maybe). This way, out of a disdainful, boring 3D-Mesh, evolves a quite cozy or not so cozy world, in which one essential aspect is still lacking though: The liveliness of humans and monsters. 
+You see: The Spacer handles equipping the World with everything that is not alive (except of plants maybe). This way, out of a disdainful, boring 3D-Mesh evolves a quite cozy or not so cozy world, in which one essential aspect is still lacking though: The liveliness of humans and monsters. 
 
 <div class="ende">
 <hr noshade size=2 width=50%>
