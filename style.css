@@ -111,7 +111,7 @@ a:hover {
 }
 
 /* Colour to connote the original documents */
-.mad-doc a:link {
+.mad-doc a:link, .mad-doc a:visited {
   color: #a1bfd5;
 }
 
