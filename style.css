@@ -342,7 +342,7 @@ main {
 }
 
 .content pre {
-  width: calc(500px - 8px - 4px); 
+  width: min(100vw - 8px - 24px - 4px, 500px - 8px - 4px);
 }
 
 .index,
