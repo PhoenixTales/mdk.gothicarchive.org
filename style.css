@@ -341,6 +341,10 @@ main {
   max-width: 500px;
 }
 
+.content pre {
+  width: calc(500px - 8px - 4px); 
+}
+
 .index,
 .content {
   margin: 4em 0 1em;
