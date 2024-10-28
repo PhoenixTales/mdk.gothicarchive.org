@@ -223,6 +223,7 @@ nav {
   --tree-border-width: 1px;
   /* This value have to be adjusted when the size of the summary item changes. */
   --summary-item-half-size: 8px;
+  --tree-border-color: #514c46;
 }
 
 .tree {
@@ -251,7 +252,7 @@ nav {
   height: 100%;
   left: 0;
   background: black;
-  border-left: var(--tree-border-width) dashed;
+  border-left: var(--tree-border-width) dashed var(--tree-border-color);
 }
 
 .tree li:first-child:before {
@@ -286,7 +287,7 @@ nav {
   background-size: contain;
   height: 12px;
   width: 12px;
-  border: 1px solid;
+  border: 1px solid var(--tree-border-color);
   background-color: black;
 }
 
@@ -303,7 +304,7 @@ nav {
   transform: translateY(calc(-50% + var(--summary-item-half-size)));
   width: 12px;
   pointer-events: none;
-  border-top: var(--tree-border-width) dashed;
+  border-top: var(--tree-border-width) dashed var(--tree-border-color);
 }
 
 .tree summary:only-child::after,
