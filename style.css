@@ -219,9 +219,96 @@ header h1 {
   margin: 0;
 }
 
+nav {
+  --tree-border-width: 1px;
+  /* This value have to be adjusted when the size of the summary item changes. */
+  --summary-item-half-size: 8px;
+}
+
+.tree {
+  font-size: 12px;
+  margin-left: 18px;
+}
+
 .tree, .tree ul {
-  margin: 0;
-  padding-left: 12px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.tree li {
+  position: relative;
+  padding-left: 18px;
+  /* This vertical margin is only for the border, to not look squashed, when connecting to each other. */
+  margin: 1.5px 0;
+}
+
+.tree li:before {
+  content: "";
+  width: 0;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  left: 0;
+  background: black;
+  border-left: var(--tree-border-width) dashed;
+}
+
+.tree li:first-child:before {
+  top: var(--summary-item-half-size);
+  height: calc(100% - var(--summary-item-half-size));
+}
+
+.tree li:last-child:before {
+  height: var(--summary-item-half-size)
+}
+
+.tree li:only-child:before {
+  display: none;
+}
+
+.tree summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.tree summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + var(--tree-border-width) / 2), calc(-50% + var(--summary-item-half-size)));
+  z-index: 1;
+  background-image: url("/_img/plus.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 12px;
+  width: 12px;
+  border: 1px solid;
+  background-color: black;
+}
+
+.tree details[open] > summary::before {
+  background-image: url("/_img/minus.svg");
+}
+
+.tree summary::after,
+.tree li:not(:has(> details))::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(calc(-50% + var(--summary-item-half-size)));
+  width: 12px;
+  pointer-events: none;
+  border-top: var(--tree-border-width) dashed;
+}
+
+.tree summary:only-child::after,
+.tree li:not(:has(> details)):only-child::after {
+  display: none;
 }
 
 .download {
