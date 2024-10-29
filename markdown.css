@@ -1,0 +1,72 @@
+.article h1, .article h2, .article h3, .article h4, .article h5 {
+    font-size: inherit;
+  }
+  
+  .article h1 {
+    color: #9a5050; /* red colour for the main heading */
+    background-color: #262422; /* header bg colour */
+    text-align: center;
+    border-bottom: 1px solid #808080;
+    padding: 5px;
+    margin: -7px -7px; /* needed to overcome the article padding */
+  }
+  
+  .article h2 {
+  }
+  
+  /* Author + Date/Version Section */
+  
+  .doc-info {
+    background-color: #262422; /* header bg colour */
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 7px -7px 0;
+    border-bottom: 1px solid #808080;
+  }
+  .doc-info li {
+    padding: 3px 7px;
+    display: flex;
+    flex-wrap: wrap; /* necessary for very narrow screens */
+  }
+  /* needed for the seperating border */
+  .doc-info li:nth-child(1) {
+    width: 50%;
+    border-right: 1px solid;
+  }
+  /* first child */
+  .doc-info li:nth-child(1)::before {
+    content: "Author:";
+    padding-right: 3px;
+  }
+  /* second child */
+  .doc-info li:nth-child(2)::before {
+    content: "Version:";
+    padding-right: 3px;
+  }
+  
+  
+  /* ARTICLE SECTION */
+      
+  .article {
+    background-color: #0f0f0f;
+    padding: 7px;
+    border: 1px solid #808080;
+    margin-top: 20px;
+  }
+  
+  /* Needed for markdown styling in order to have seperate boxes divided into h2 sections */
+  .article h2::before {
+    display: block;
+    height: 20px;
+    width: calc(100% + 16px);
+    background-color: black;
+    content: '';
+    position: relative;
+    left: -8px;
+    border: 1px solid #808080;
+    border-left: black;
+    border-right: black;
+    margin-bottom: 10px;
+  }

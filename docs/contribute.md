@@ -1,4 +1,4 @@
-## How to contribute
+# How to contribute
 
 * Flosha
 * 21.10.2024  
@@ -30,7 +30,7 @@ Then ``git push``. Take care to perform ``git pull`` beforehand in order to avoi
 If this seems to complicated to you, don't worry. You also can contribute something via GitHub's webinterface. Just write a markdown document on your computer in any random text editor of your choice, then create a new file in the web interface (click on the ``+``, then choose ``add file``). Safe it with the extension ``.md``.  
 
 
-### How to write a document in Markdown
+## How to write a document in Markdown
 
 You can take this document here as an example. Just take a [look at it in the repository](https://github.com/PhoenixTales/mdk.gothicarchive.org/blob/main/docs/contribute.md). 
 
