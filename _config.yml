@@ -3,7 +3,6 @@ description: Gothic Mod Development Kit by Piranha Bytes and the Mad Scientists,
 author: Mad Scientists, Piranha Bytes, Phoenix Tales
 include:
   - "_img"
-  - "docs"
 theme: null
 defaults:
   -
@@ -13,4 +12,13 @@ defaults:
     values:
       layout: "default"
 
-livereload: true # Rebuilds the site and reloads the page.
+livereload: true
+
+plugins:
+# Default layout plugin is not needed for now, since the defaults field, in this config, covers it for both html and md files.
+#  - jekyll-default-layout
+ - jekyll-optional-front-matter
+ - jekyll-titles-from-headings
+
+optional_front_matter:
+  remove_originals: true
