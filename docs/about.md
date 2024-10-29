@@ -1,6 +1,4 @@
----
-title: About the Gothic MDK
----
+# About the Gothic MDK
 
 <style>
 
@@ -78,8 +76,6 @@ title: About the Gothic MDK
 }
 </style>
 
-
-# About the Gothic MDK
 
 * Flosha
 * 21.10.2024

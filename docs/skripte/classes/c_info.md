@@ -1,6 +1,4 @@
----
-title: C_INFO
----
+# C_INFO Daedalus class
 
 <style>
 
@@ -78,8 +76,6 @@ title: C_INFO
 }
 </style>
 
-
-# C_INFO Daedalus class
 
 * Auronen <!-- Author -->
 * 02.08.2022 <!-- Date -->
