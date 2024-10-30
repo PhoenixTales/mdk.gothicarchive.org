@@ -316,41 +316,20 @@ nav {
 }
 
 .download {
-  position: relative;
   margin: 66px auto 0;
-  border: 1px solid #464646;
-  border-top: none;
-  font-size: 11px;
+  padding: 0;
+  border-color: #464646;
   width: fit-content;
 }
 
-.download::before,
-.download::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  border-top: 1px solid #554b43;
-  width: calc(50% - 14ch);
-  background-color: #554b43;
-}
-
-.download::before {
-  left: 0;
-}
-
-.download::after {
-  right: 0;
-}
-
-.download h2 {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translate(-50%, -50%);
-  margin: 0;
+.download legend {
   line-height: 1;
-  font-size: inherit;
-  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: monospace;
+  font-size: 11px;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .download a:link {
