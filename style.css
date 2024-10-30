@@ -211,7 +211,7 @@ header h1 {
 }
 
 .menu-index {
-  padding: 0 12px 48px;
+  padding: 20px 12px 48px;
 }
 
 .base-links {
@@ -765,7 +765,6 @@ footer {
     position: sticky;
     top: 0;
     box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
-    margin-bottom: 26px;
   }
 
   .menu-btn {
@@ -830,6 +829,7 @@ footer {
 
   .menu-index {
     display: none;
+    padding-top: 26px;
   }
 
   body:has(#menu-toggle:checked) .menu-index {
