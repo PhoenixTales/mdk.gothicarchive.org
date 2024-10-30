@@ -327,7 +327,7 @@ nav {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   font-family: monospace;
-  font-size: 11px;
+  font-size: 12px;
   padding: 0 10px;
   text-align: center;
 }
@@ -350,7 +350,7 @@ nav {
 .download p {
   text-align: center;
   padding: 1.2em 3.2em;
-  font-size: 13px;
+  font-size: 14px;
   margin: 0;
   font-family: monospace;
 }
