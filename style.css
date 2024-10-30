@@ -317,7 +317,7 @@ nav {
 
 .download {
   position: relative;
-  margin: 48px auto 0;
+  margin: 66px auto 0;
   border: 1px solid #464646;
   border-top: none;
   font-size: 11px;
@@ -765,7 +765,7 @@ footer {
     position: sticky;
     top: 0;
     box-shadow: 0 30px 40px rgba(31, 22, 22, 0.1);
-    margin-bottom: 18px;
+    margin-bottom: 26px;
   }
 
   .menu-btn {
