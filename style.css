@@ -162,7 +162,7 @@ nav h2 {
   margin-bottom: 1em;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 0.8rem;
+  font-size: 15px;
   font-weight: normal;
   font-family: monospace;
 }
@@ -221,14 +221,17 @@ header h1 {
 
 nav {
   --tree-border-width: 1px;
-  /* This value have to be adjusted when the size of the summary item changes. */
-  --summary-item-half-size: 8px;
+  /* This value have to be adjusted when the font-size of the tree changes. */
+  --item-half-size: 10px;
   --tree-border-color: #514c46;
 }
 
+.base-links, .tree {
+  font-size: 14px;
+}
+
 .tree {
-  font-size: 12px;
-  margin-left: 18px;
+  margin-left: 1.5em;
 }
 
 .tree, .tree ul {
@@ -239,7 +242,7 @@ nav {
 
 .tree li {
   position: relative;
-  padding-left: 18px;
+  padding-left: 1.5em;
   /* This vertical margin is only for the border, to not look squashed, when connecting to each other. */
   margin: 1.5px 0;
 }
@@ -248,7 +251,7 @@ nav {
   content: "";
   width: 0;
   position: absolute;
-  top: 0px;
+  top: 0;
   height: 100%;
   left: 0;
   background: black;
@@ -256,12 +259,12 @@ nav {
 }
 
 .tree li:first-child:before {
-  top: var(--summary-item-half-size);
-  height: calc(100% - var(--summary-item-half-size));
+  top: var(--item-half-size);
+  height: calc(100% - var(--item-half-size));
 }
 
 .tree li:last-child:before {
-  height: var(--summary-item-half-size)
+  height: var(--item-half-size)
 }
 
 .tree li:only-child:before {
@@ -280,13 +283,13 @@ nav {
   position: absolute;
   left: 0;
   top: 0;
-  transform: translate(calc(-50% + var(--tree-border-width) / 2), calc(-50% + var(--summary-item-half-size)));
+  transform: translate(calc(-50% + var(--tree-border-width) / 2), calc(-50% + var(--item-half-size)));
   z-index: 1;
   background-image: url("/_img/plus.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 12px;
-  width: 12px;
+  height: 1em;
+  width: 1em;
   border: 1px solid var(--tree-border-color);
   background-color: black;
 }
@@ -301,8 +304,8 @@ nav {
   position: absolute;
   left: 0;
   top: 0;
-  transform: translateY(calc(-50% + var(--summary-item-half-size)));
-  width: 12px;
+  transform: translateY(calc(-50% + var(--item-half-size)));
+  width: 1em;
   pointer-events: none;
   border-top: var(--tree-border-width) dashed var(--tree-border-color);
 }
