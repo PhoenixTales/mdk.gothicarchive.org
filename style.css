@@ -317,7 +317,7 @@ nav {
 
 .download {
   margin: 66px auto 0;
-  padding: 0;
+  padding: 0 10px;
   border-color: #464646;
   width: fit-content;
 }
@@ -332,6 +332,12 @@ nav {
   text-align: center;
 }
 
+.download a {
+  /* This needed to expand the link to the full width, due to set side paddings to the fieldset, in order to have a minimum width of the lines surrounding the legend element. */
+  margin-inline: -10px;
+  display: block;
+}
+
 .download a:link {
   text-decoration: none;
   color: #a1a582;
@@ -343,7 +349,7 @@ nav {
 
 .download p {
   text-align: center;
-  padding: 1.6em 3.2em;
+  padding: 1.6em 3em;
   font-size: 12px;
   margin: 0;
 }
