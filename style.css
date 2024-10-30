@@ -349,9 +349,10 @@ nav {
 
 .download p {
   text-align: center;
-  padding: 1.2em 3.8em;
-  font-size: 12px;
+  padding: 1.2em 3.2em;
+  font-size: 13px;
   margin: 0;
+  font-family: monospace;
 }
 
 /* .selected class is not used. */
