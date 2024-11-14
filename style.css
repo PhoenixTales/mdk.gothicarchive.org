@@ -706,7 +706,7 @@ footer {
   body:has(#menu-toggle:checked) {
     overflow: hidden;
     /* Header height + header padding. */
-    padding-top: calc(245.962px + var(--header-padding-top));
+    padding-top: calc(247.65px + var(--header-padding-top));
   }
 
   nav {
